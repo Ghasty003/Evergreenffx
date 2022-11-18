@@ -9,6 +9,10 @@ function Signup() {
 
     const [seePass, setSeePass] = useState(false);
     const passwordInput = useRef("");
+    const strength = useRef("");
+    const div1 = useRef("");
+    const div2 = useRef("");
+    const div3 = useRef("");
 
     const seePassword = () => {
         setSeePass(true);
@@ -18,6 +22,36 @@ function Signup() {
     const hidePassword = () => {
         setSeePass(false);
         passwordInput.current.type = "password";
+    }
+
+    const handleInput = (e) => {
+        if( e.target.value.length >= 8 ) {
+            strength.current.innerHTML = "OK"
+            div1.current.style.background = "#2B9978"
+        } else {
+            div1.current.style.background = "#D1D1D1";
+            if (strength.current.innerHTML == "OK") {
+                strength.current.innerHTML = "";
+            }
+        }
+        if (e.target.value.length >= 8 && /[0-9]/.test(e.target.value)) {
+            strength.current.innerHTML = "Good";
+            div2.current.style.background = "#2B9978";
+        } else {
+            div2.current.style.background = "#D1D1D1";
+            if (strength.current.innerHTML == "Good") {
+                strength.current.innerHTML = "OK";
+            }
+        }
+        if(e.target.value.length >= 8 && /[0-9]/.test(e.target.value) && /[^a-zA-Z0-9]/.test(e.target.value)) {
+            strength.current.innerHTML = "Strong";
+            div3.current.style.background = "#2B9978";
+        } else {
+            div3.current.style.background = "#D1D1D1";
+            if (strength.current.innerHTML == "Strong") {
+                strength.current.innerHTML = "Good";
+            }
+        }
     }
 
     return (
@@ -52,7 +86,7 @@ function Signup() {
 
                     <div className="password">
                         <p>Password</p>
-                        <input type="password" className="pass" ref={passwordInput} />
+                        <input type="password" onInput={handleInput} className="pass" ref={passwordInput} />
                         <i>
                             { seePass ? <FiEyeOff className='see-pass' onClick={hidePassword} />
                              : <IoEyeOutline className='see-pass' onClick={seePassword} />
@@ -62,13 +96,13 @@ function Signup() {
 
                     <section className="strength">
                         <p>Password Strength: </p>
-                        <p></p>
+                        <p ref={strength}></p>
                     </section>
 
                     <section className="lines">
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <div ref={div1}></div>
+                        <div ref={div2}></div>
+                        <div ref={div3}></div>
                     </section>
 
                     <button>Create account</button>

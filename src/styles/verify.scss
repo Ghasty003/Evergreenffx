@@ -108,16 +108,20 @@ $font: "DM Sans";
         }
 
         form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include small-screen {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
             div {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 width: 370px;
                 margin-top: 20px;
+                border: none;
+                gap: 6px;
                 @include small-screen {
                     width: 100%;
                 }
