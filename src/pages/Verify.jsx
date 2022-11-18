@@ -6,11 +6,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Input = () => {
 
-    const handleInput= () => {
-        
-       
-    }
-
     useEffect(() => {
 
         const OTPinput = document.querySelectorAll("input");
@@ -33,7 +28,7 @@ const Input = () => {
     }, [])
 
 
-    return <input onInput={handleInput} />
+    return <input />
 }
 
 function Verify() {

@@ -19,7 +19,7 @@ $font: "DM Sans";
     }
 }
 
-main {
+.signup-main {
     width: 60%;
     display: flex;
     padding-left: 100px;
@@ -197,7 +197,7 @@ main {
         }
     }
 
-    main {
+    .signup-main {
         width: 100%;
         align-items: center;
         gap: 10px;
@@ -208,7 +208,7 @@ main {
 
 
 @media (max-width:570px) {
-    main {
+    .signup-main {
         form {
             display: flex;
             justify-content: center;
@@ -236,7 +236,7 @@ main {
 }
 
 @media (max-width:480px) {
-    main {
+    .signup-main {
         form {
             > div {
                 width: 18rem;
