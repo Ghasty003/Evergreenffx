@@ -41,7 +41,9 @@ function CreateAccount() {
 
                 <div className="ask">
                     <p>Already Have an Account?</p>
-                    <Link style={{textDecoration: "none", color: "#00855D"}} to="/login">Login</Link>
+                    <Link style={{textDecoration: "none", color: "#00855D", 
+                    fontFamily: "DM Sans"
+                }} to="/login">Login</Link>
                 </div>
             </main>
         </div>

@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=DM Sans");
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 $primary: #00855D;
 $custom-bgcolor: #D1D1D1;
 $font: "DM Sans";
@@ -13,7 +19,7 @@ $font: "DM Sans";
     }
 }
 
-.signup-main {
+main {
     width: 60%;
     display: flex;
     padding-left: 100px;
@@ -181,3 +187,67 @@ $font: "DM Sans";
     }
 }
 
+
+@media (max-width:1050px) {
+    .parent {
+        text-align: center;
+        .include {
+            display: none;
+        }
+    }
+
+    main {
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+        padding-left: 0;
+    }
+}
+
+
+@media (max-width:570px) {
+    main {
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            > div {
+                width: 28rem;
+                height: 3rem;
+            }
+
+            .password {
+                .see-pass {
+                    width: 1.15rem;;
+                    top: 15px;
+                }
+            }
+        }
+
+        .strength {
+            justify-content: flex-start;
+            text-align: start;
+            margin-left: -8px;
+        }
+    }
+}
+
+@media (max-width:480px) {
+    main {
+        form {
+            > div {
+                width: 18rem;
+                height: 3rem;
+            }
+        }
+        
+        .lines {
+            div {
+                width: 5rem;
+                height: 2px;
+            }
+        }
+    }
+}

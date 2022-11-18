@@ -8,12 +8,31 @@ $primary: #00855D;
 $custom-bgcolor: #D1D1D1;
 $font: "DM Sans";
 
+@mixin mobile {
+    @media (max-width:1040px) {
+        @content;
+    }
+}
+
+@mixin small-screen {
+    @media (max-width: 635px) {
+        @content;
+    }
+}
+
 .login-main {
     width: 60%;
     display: flex;
     padding-left: 100px;
     flex-direction: column;
     margin-top: 5%;
+    @include mobile {
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+        padding-left: 0;
+    }
 
     img {
         margin: 20px 0;
@@ -37,11 +56,18 @@ $font: "DM Sans";
                 family: $font;
             }
             color: #8B8B8B;
+            @include small-screen {
+                font-size: 0.875rem;
+            }
         }
     }
 
     form {
         margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         div:first-child, div:nth-child(2) {
             border: 1px solid #D1D1D1;
@@ -55,6 +81,9 @@ $font: "DM Sans";
             text-align: center;
             position: relative;
             margin-bottom: 15px;
+            @include small-screen {
+                width: 300px;
+            }
 
             p {
                 font-family: $font;
@@ -112,6 +141,9 @@ $font: "DM Sans";
             display: flex;
             align-items: center;
             gap: 5px;
+            @include mobile {
+                justify-content: center;
+            }
 
             p {
                 font-family: $font;

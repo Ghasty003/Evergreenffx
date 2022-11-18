@@ -4,11 +4,30 @@ $primary: #00855D;
 $custom-bgcolor: #D1D1D1;
 $font: "DM Sans";
 
+@mixin mobile {
+    @media (max-width:1040px) {
+        @content;
+    }
+}
+
+@mixin small-screen {
+    @media (max-width: 635px) {
+        @content;
+    }
+}
+
 .verify-main {
     width: 60%;
     display: flex;
     padding-left: 100px;
     flex-direction: column;
+    @include mobile {
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+        padding-left: 0;
+    }
 
     img {
         margin: 20px 0;
@@ -82,16 +101,26 @@ $font: "DM Sans";
                     family: $font;
                 }
                 color: #8B8B8B;
+                @include small-screen {
+                    font-size: 1.025rem;
+                }
             }
         }
 
         form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             div {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 width: 370px;
                 margin-top: 20px;
+                @include small-screen {
+                    width: 100%;
+                }
 
                 input {
                     width: 55px;
@@ -101,6 +130,10 @@ $font: "DM Sans";
                     outline: none;
                     text-align: center;
                     color: #696969;
+                    @include small-screen {
+                        width: 40px;
+                        height: 40px;
+                    }
                 }
             }
 
