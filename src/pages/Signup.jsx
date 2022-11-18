@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
-import logo from "../assets/logo-dark2x.png";
 import Side from '../components/Side';
 import "../styles/signup.scss";
 import { IoEyeOutline } from "react-icons/io5";
 import { FiEyeOff } from "react-icons/fi"
+import Logo from '../components/Logo';
 
 function Signup() {
 
@@ -25,15 +25,9 @@ function Signup() {
 
             <Side />
 
-            <main>
-                <img src={logo} alt="logo" />
-                <div className="container">
-                    <div className="circle circle-one">1</div>
-                    <div className="dash"></div>
-                    <div className="circle circle-two">2</div>
-                    <div className="dash dash-two"></div>
-                    <div className="circle circle-three">3</div>
-                </div>
+            <main className='signup-main'>
+                
+                <Logo />
 
                 <div className="header">
                     <h2>Personal Details</h2>
