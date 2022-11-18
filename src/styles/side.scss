@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=DM Sans");
+
+@mixin mobile {
+    @media (max-width:700px) {
+        @content;
+    }
+}
+
+.side {
+    background-color: #FAFAFA;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // padding: 1.25rem 0;
+    @include mobile {
+        display: none;
+    }
+
+    h2 {
+        font-size: 1.625rem;
+        color: #1C1C1E;
+        width: 25.0625rem;
+        height: 2.125rem;
+        font-family: "DM sans";
+        margin: 8px 0;
+    }
+    
+    p {
+        color: #8E8E93;
+        width: 25.0625rem;
+        height: 3rem;
+        font-family: "DM sans";
+    }
+}
