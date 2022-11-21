@@ -1,0 +1,58 @@
+@mixin mobile {
+    @media ( width < 806px) {
+        @content;
+    }
+}
+
+.sub-parent {
+    background-color: #00855D;
+    width: 80%;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+
+    > div:first-child {
+        margin-top: 20px;
+
+        h3 {
+            color: white;
+            font: {
+                weight: 700;
+                size: 20px;
+                style: normal;
+            }
+        }
+
+        p {
+            color: white;
+            width: 305px;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        button {
+            text-align: center;
+            background-color: white;
+            padding: 6px;
+            border: none;
+            border-radius: 4px;
+            color: #191919;
+            margin-top: 5px;
+        }
+    }
+
+    > div:last-child {
+        position: absolute;
+        right: 0px;
+        bottom: 0;
+
+        img {
+            width: 250px;
+            @include mobile {
+                width: 150px;
+            }
+        }
+    }
+}
