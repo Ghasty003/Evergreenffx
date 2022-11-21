@@ -57,8 +57,8 @@ function Signup() {
 
     const navigate = useNavigate()
 
-    function handleSubmit() {
-        navigate("/dashboard")
+    const handleSubmit = () => {
+        navigate("/dashboard");
     }
 
     return (
