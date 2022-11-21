@@ -4,6 +4,7 @@ import "../styles/signup.scss";
 import { IoEyeOutline } from "react-icons/io5";
 import { FiEyeOff } from "react-icons/fi"
 import Logo from '../components/Logo';
+import { useNavigate } from 'react-router-dom';
 
 function Signup() {
 
@@ -54,6 +55,12 @@ function Signup() {
         }
     }
 
+    const navigate = useNavigate()
+
+    function handleSubmit() {
+        navigate("/dashboard")
+    }
+
     return (
         <div className='parent'>
 
@@ -68,7 +75,7 @@ function Signup() {
                     <p>Please fill your personal details below </p>
                 </div>
 
-                <form action="">
+                <form action="" onSubmit={handleSubmit}>
                     <div>
                         <p>Your name</p>
                         <input type="text" placeholder="jeff brown" required />
