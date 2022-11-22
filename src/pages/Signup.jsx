@@ -26,36 +26,36 @@ function Signup() {
     }
 
     const handleInput = (e) => {
-        if( e.target.value.length >= 8 ) {
-            strength.current.innerHTML = "OK"
-            div1.current.style.background = "#2B9978"
-        } else {
+        if( e.target.value.length < 1 ) {
             div1.current.style.background = "#D1D1D1";
-            if (strength.current.innerHTML == "OK") {
+            if (strength.current.innerHTML == "Weak") {
                 strength.current.innerHTML = "";
             }
+        } else if( e.target.value.length < 6 ) {
+            strength.current.innerHTML = "Weak"
+            div1.current.style.background = "#2B9978"
         }
-        if (e.target.value.length >= 8 && /[0-9]/.test(e.target.value)) {
-            strength.current.innerHTML = "Good";
+        if (e.target.value.length >= 6 && /[A-Z]/.test(e.target.value)) {
+            strength.current.innerHTML = "Medium";
             div2.current.style.background = "#2B9978";
         } else {
             div2.current.style.background = "#D1D1D1";
-            if (strength.current.innerHTML == "Good") {
-                strength.current.innerHTML = "OK";
+            if (strength.current.innerHTML == "Medium") {
+                strength.current.innerHTML = "Weak";
             }
         }
-        if(e.target.value.length >= 8 && /[0-9]/.test(e.target.value) && /[^a-zA-Z0-9]/.test(e.target.value)) {
+        if(e.target.value.length >= 6 && /[A-Z]/.test(e.target.value) && /[^a-zA-Z0-9]/.test(e.target.value)) {
             strength.current.innerHTML = "Strong";
             div3.current.style.background = "#2B9978";
         } else {
             div3.current.style.background = "#D1D1D1";
             if (strength.current.innerHTML == "Strong") {
-                strength.current.innerHTML = "Good";
+                strength.current.innerHTML = "Medium";
             }
         }
     }
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const handleSubmit = () => {
         navigate("/dashboard");
