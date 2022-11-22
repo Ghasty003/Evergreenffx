@@ -4,7 +4,7 @@ $font: "DM Sans";
 $primary: #00855D;
 
 @mixin mobile {
-    @media ( width < 806px) {
+    @media (max-width:806px) {
         @content;
     }
 }
