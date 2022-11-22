@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import '../src/styles/App.scss';
 import CreateAccount from './pages/CreateAccount';
 import Dashboard from './pages/Dashboard';
+import DashboardSuspended from './pages/DashBoardSuspended';
 import DashBoardWarning from './pages/DashBoardWarning';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -22,6 +23,7 @@ function App() {
         <Route path='/dashboard'>
           <Route index element={<Dashboard />} />
           <Route path='warning' element={<DashBoardWarning />} />
+          <Route path='suspended' element={<DashboardSuspended />} />
         </Route>
      </Routes>
     </div>
