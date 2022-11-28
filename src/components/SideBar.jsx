@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import "../styles/sidebar.scss";
-import logo from "../assets/logo-dark2x.png";
+import logo from "../assets/evergreeen-logo.png";
 import img1 from "../assets/category-2.png";
 import trade from "../assets/trade.png";
 import refresh from "../assets/refresh.png";
@@ -11,12 +11,17 @@ import coin from '../assets/coin.png';
 import logout from '../assets/logout.png';
 import NavContext from '../context/NavContext';
 import { FaTimes } from "react-icons/fa";
+import { Link, useMatch, useResolvedPath } from 'react-router-dom';
 
-const Div = ({img, text}) => {
+const Div = ({img, text, to}) => {
+    const resolvedPath = useResolvedPath(to);
+    const isActive = useMatch({path: resolvedPath.pathname, end: true});
     return (
-        <div className='side-div'>
-            <img src={img} alt="image" />
-            <p>{ text }</p>
+        <div className={isActive ? "active" : ""}>
+            <Link to={to} className='side-div'>
+                <img src={img} alt="image" />
+                <p>{ text }</p>
+            </Link>
         </div>
     )
 }
@@ -31,13 +36,13 @@ function SideBar() {
                 <img src={logo} alt="logo" />
                 <FaTimes className='icon' onClick={hideNav} />
             </div>
-            <Div img={img1} text="Dashboard" />
-            <Div img={trade} text="Trade" />
-            <Div img={refresh} text="History" />
-            <Div img={profile} text="Referrals" />
-            <Div img={receipt} text="Invoices" />
-            <Div img={money} text="Harvest" />
-            <Div img={coin} text="Bonuses" />
+            <Div to="/dashboard" img={img1} text="Dashboard" />
+            <Div to="/trade" img={trade} text="Trade" />
+            <Div to="/history" img={refresh} text="History" />
+            <Div to="/referrals" img={profile} text="Referrals" />
+            <Div to="/invoices" img={receipt} text="Invoices" />
+            <Div to="/harvest" img={money} text="Harvest" />
+            <Div to="/bonuses" img={coin} text="Bonuses" />
             <div className='line'></div>
             <div className='logout'>
                 <img src={logout} alt="image" />

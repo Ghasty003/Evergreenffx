@@ -8,6 +8,7 @@ import DashboardSuspended from './pages/DashBoardSuspended';
 import DashBoardWarning from './pages/DashBoardWarning';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Trade from './pages/Trade';
 import Verify from './pages/Verify';
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
           <Route path='warning' element={<DashBoardWarning />} />
           <Route path='suspended' element={<DashboardSuspended />} />
           <Route path='content' element={<DashBoardContent />} />
+        </Route>
+        <Route path='/trade'>
+          <Route index element={<Trade />} />
         </Route>
      </Routes>
     </div>

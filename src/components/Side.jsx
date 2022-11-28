@@ -4,7 +4,6 @@ import "../styles/side.scss";
 
 
 function Side() {
-    // alert(window.innerWidth)
     return (
         <div className="side">
             <img src={illustration} alt="Illustration" />

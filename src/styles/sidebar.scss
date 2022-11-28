@@ -33,10 +33,28 @@ $font: "DM Sans";
         width: 100%;
     }
 
+    .active {
+        background-color: #00C805;
+        border-radius: 8px;
+        border-left: 2px solid black;
+        a {
+            color: #191919;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #AEAEAE;
+    }
+
     > div:first-child {
         display: flex;
         justify-content: space-between;
         width: 100%;
+
+        img {
+            margin-bottom: 10px;
+        }
 
         .icon {
             font-size: 30px;
@@ -50,6 +68,11 @@ $font: "DM Sans";
         }
     }
     
+    > div:nth-child(2) {
+        img {
+            // background-color: black;
+        }
+    }
 
     .line {
         width: 206px;
