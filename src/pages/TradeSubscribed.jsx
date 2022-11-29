@@ -1,11 +1,10 @@
 import React from 'react';
 import SideBar from '../components/SideBar';
 import Topbar from "../components/Topbar";
-import Subscription from '../components/Subscription';
 import Settings from '../components/Settings';
-import add from "../assets/add.png";
+import add from "../assets/add-dark.png";
 
-function Trade() {
+function TradeSubscribed() {
     return (
         <div style={{
             display: "flex",
@@ -16,11 +15,10 @@ function Trade() {
                 width: "100%"
             }}>
                 <Topbar />
-                <Subscription />
-                <Settings addImg={add} />
+                <Settings addImg={add} btnColor=" #191919" bg="#00C805" shadow="2px 2px black" />
             </div>
         </div>
     );
 }
 
-export default Trade;
+export default TradeSubscribed;

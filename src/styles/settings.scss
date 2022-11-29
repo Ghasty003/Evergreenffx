@@ -1,0 +1,64 @@
+.settings-parent {
+    background-color: #FFFFFF;
+    padding: 15px;
+    width: 95%;
+    margin: 30px auto;
+
+    > div:first-child {
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+            color: #191919;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        p {
+            max-width: 516px;
+            color: #999999;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        button {
+            background: #AEAEAE;
+            border-radius: 8px;
+            width: 130px;
+            height: 48px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #FFFFFF;
+            font-weight: 400;
+            font-size: 14px;
+            cursor: pointer;
+
+            img {
+                position: relative;
+                right: 5px;
+            }
+        }
+    }
+
+    > div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 0;
+
+        p {
+            color: #191919;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        span {
+            color: black;
+            font-weight: bold;
+        }
+    }
+}

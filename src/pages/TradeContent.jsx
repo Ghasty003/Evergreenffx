@@ -1,11 +1,8 @@
 import React from 'react';
 import SideBar from '../components/SideBar';
-import Topbar from "../components/Topbar";
-import Subscription from '../components/Subscription';
-import Settings from '../components/Settings';
-import add from "../assets/add.png";
+import Topbar from '../components/Topbar';
 
-function Trade() {
+function TradeContent() {
     return (
         <div style={{
             display: "flex",
@@ -16,11 +13,9 @@ function Trade() {
                 width: "100%"
             }}>
                 <Topbar />
-                <Subscription />
-                <Settings addImg={add} />
             </div>
         </div>
     );
 }
 
-export default Trade;
+export default TradeContent;

@@ -9,6 +9,8 @@ import DashBoardWarning from './pages/DashBoardWarning';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Trade from './pages/Trade';
+import TradeContent from './pages/TradeContent';
+import TradeSubscribed from './pages/TradeSubscribed';
 import Verify from './pages/Verify';
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
         </Route>
         <Route path='/trade'>
           <Route index element={<Trade />} />
+          <Route path='subscribed' element={<TradeSubscribed />} />
+          <Route path='content' element={<TradeContent />} />
         </Route>
      </Routes>
     </div>

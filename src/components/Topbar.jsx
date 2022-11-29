@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import "../styles/topbar.scss";
 import wallet from "../assets/wallet.png";
 import pic from "../assets/Userpic.png";
+import eye from "../assets/eye-slash.png";
 import arrow from "../assets/Vector.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import NavContext from '../context/NavContext';
@@ -29,6 +30,7 @@ function Topbar() {
                         <p>wallet balance</p>
                         <h3>$500</h3>
                     </div>
+                    <img src={eye} alt="image" />
                 </div>
             <div className='container'>
                 <div className='user'>
