@@ -1,6 +1,7 @@
 import React from 'react';
 import SideBar from '../components/SideBar';
 import Topbar from '../components/Topbar';
+import Suspended from '../components/Suspended';
 import "../styles/trade-content.scss";
 import deleteImg from "../assets/delete.png";
 import switchOff from "../assets/switch-off.png"
@@ -55,7 +56,7 @@ const Table = () => {
     )
 }
 
-function TradeContent() {
+function TradeContentErr() {
     return (
         <div style={{
             display: "flex",
@@ -66,10 +67,11 @@ function TradeContent() {
                 width: "100%"
             }}>
                 <Topbar />
+                <Suspended />
                 <Table />
             </div>
         </div>
     );
 }
 
-export default TradeContent;
+export default TradeContentErr;

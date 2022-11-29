@@ -1,12 +1,20 @@
-.content-parent {
+.table-parent {
     background-color: #FFFFFF;
     width: 95%;
     margin: 20px auto;
-    padding: 10px;
+    padding: 15px;
 
     h3 {
+        color: #191919;
         font-weight: 400;
         font-size: 18px;
+    }
+
+    p {
+        max-width: 516px;
+        color: #999999;
+        font-weight: 400;
+        font-size: 14px;
     }
 
     table {
@@ -28,6 +36,12 @@
         font-weight: 400;
         font-size: 14px;
         color: #191919;
+
+        &:last-child {
+            img {
+                margin: 0 5px;
+            }
+        }
     }
 
     tr:last-child td {
