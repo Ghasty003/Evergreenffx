@@ -9,6 +9,7 @@ const Input = () => {
     useEffect(() => {
 
         const OTPinput = document.querySelectorAll("input");
+
         OTPinput[0].focus();
         
         OTPinput.forEach( (input, index) => {
@@ -22,8 +23,8 @@ const Input = () => {
                         OTPinput[0].focus();
                     }
                 }
-            })
-        })
+            });
+        });
 
     }, [])
 
