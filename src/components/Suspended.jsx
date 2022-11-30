@@ -7,17 +7,19 @@ function Suspended() {
     return (
         <div className='suspended'>
             <div>
-                <img src={warn} alt="image" />
                 <div>
-                    <h3>Your trading account has been suspended.</h3>
-                    <p>This is due to your defaulting of the 20% profit sharing of $20.8.
-                        Check the invoice tab for more details.
-                    </p>
+                    <img src={warn} alt="image" />
+                    <div>
+                        <h3>Your trading account has been suspended.</h3>
+                        <p>This is due to your defaulting of the 20% profit sharing of $20.8.
+                            Check the invoice tab for more details.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <img src={hands} alt="image" />
-            <div>
-                <button>Pay Now</button>
+                <img src={hands} alt="image" />
+                <div>
+                    <button>Pay Now</button>
+                </div>
             </div>
         </div>
     );

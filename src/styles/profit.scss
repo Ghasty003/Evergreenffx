@@ -55,6 +55,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            box-shadow: 1.5px 1.5px #191919;
             @include mobile {
                 margin: 10px 0;
             }
