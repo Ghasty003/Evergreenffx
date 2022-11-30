@@ -6,6 +6,7 @@ const NavContext = createContext();
 export const NavContextProvider = ({children}) => {
 
     const navRef = useRef("");
+    const div = useRef("");
 
     const navRefAnimation = [
         {left: "-100%", opacity: 0},
@@ -34,8 +35,12 @@ export const NavContextProvider = ({children}) => {
         navRef.current.classList.add("toggle");
     }
 
+    const showDetails = () => {
+        div.current.style.display = "flex";
+    }
+
     return (
-        <NavContext.Provider value={{navRef, showNav, hideNav}}  >
+        <NavContext.Provider value={{navRef, showNav, hideNav, div, showDetails}}  >
             {children}
         </NavContext.Provider>
     )

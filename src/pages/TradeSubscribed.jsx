@@ -3,6 +3,7 @@ import SideBar from '../components/SideBar';
 import Topbar from "../components/Topbar";
 import Settings from '../components/Settings';
 import add from "../assets/add-dark.png";
+import AddAccount from '../components/AddAccount';
 
 function TradeSubscribed() {
     return (
@@ -16,6 +17,7 @@ function TradeSubscribed() {
             }}>
                 <Topbar />
                 <Settings addImg={add} btnColor=" #191919" bg="#00C805" shadow="2px 2px black" />
+                <AddAccount />
             </div>
         </div>
     );

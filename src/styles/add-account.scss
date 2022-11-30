@@ -1,0 +1,101 @@
+.add-parent {
+    background-color: #FFFFFF;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    position: relative;
+    top: -400px;
+    z-index: 1000;
+    box-shadow: 0 0 10px 10000px rgba(0, 0, 0, .5);
+    animation: 1s add;
+
+    > div {
+        width: 90%;
+        margin: 25px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            color: black;
+            font-size: 20px;
+        }
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    form {
+        width: 100%;
+        text-align: center;
+
+        div:nth-child(3) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #AEAEAE;
+            font-size: 12px;
+            position: relative;
+            top: -15px;
+            left: -120px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        div:not(div:nth-child(3)) {
+            border: 1px solid #D1D1D1;
+            border-radius: 8px;
+            padding: 8px 16px;
+            width: 90%;
+            height: 48px;
+            display: flex;
+            justify-content: start;
+            align-items: flex-end;
+            text-align: center;
+            position: relative;
+            margin: auto;
+            margin-bottom: 15px;
+
+            p {
+                font-size: 10px;
+                position: absolute;
+                top: 3px;
+                color: #AEAEAE;
+            }
+
+            input {
+                border: none;
+                outline: none;
+                width: 100%;
+                padding-bottom: 5px;
+            }
+        }
+
+        button {
+            background-color: #00C805;
+            color: #191919;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 1.5px 1.5px #191919;
+            margin: 10px;
+        }
+    }
+}
+
+@keyframes add {
+    from {
+        transform: translateY(-100px);
+    }
+}

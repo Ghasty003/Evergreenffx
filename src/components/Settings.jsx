@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../styles/settings.scss';
 import puzzle from "../assets/oc-puzzle.svg";
+import NavContext from '../context/NavContext';
 
 function Settings({ addImg, btnColor, bg, shadow}) {
+
+    const { showDetails } = useContext(NavContext);
+
     return (
         <div className='settings-parent'>
             <div>
@@ -10,7 +14,7 @@ function Settings({ addImg, btnColor, bg, shadow}) {
                     <h3>Trade Settings</h3>
                     <p>Fill in the form below correctly to connect your trading account to our AI powered system then sit back and enjoy the ride!.</p>
                 </div>
-                <button style={{
+                <button onClick={showDetails} style={{
                     color: btnColor,
                     background: bg,
                     boxShadow: shadow

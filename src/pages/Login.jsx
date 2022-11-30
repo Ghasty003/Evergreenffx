@@ -40,13 +40,13 @@ function Login() {
                 </div>
 
                 <div className="password">
-                        <p>Password</p>
-                        <input type="password" className="pass" ref={passwordInput} />
-                        <i>
-                            { seePass ? <FiEyeOff className='see-pass' onClick={hidePassword} />
-                             : <IoEyeOutline className='see-pass' onClick={seePassword} />
-                            }
-                        </i>
+                    <p>Password</p>
+                    <input type="password" className="pass" ref={passwordInput} />
+                    <i>
+                        { seePass ? <FiEyeOff className='see-pass' onClick={hidePassword} />
+                            : <IoEyeOutline className='see-pass' onClick={seePassword} />
+                        }
+                    </i>
                     </div>
                 <p>Forgot Password</p>
 
