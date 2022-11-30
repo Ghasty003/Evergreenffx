@@ -3,8 +3,6 @@ import SideBar from '../components/SideBar';
 import Topbar from '../components/Topbar';
 import "../styles/trade-content.scss";
 import deleteImg from "../assets/delete.png";
-import switchOff from "../assets/switch-off.png"
-import switchOn from "../assets/switch.png"
 
 const Table = () => {
     return (
@@ -32,7 +30,10 @@ const Table = () => {
                             fontWeight: 700
                         }}>Connected</td>
                         <td>
-                            <img src={switchOn} alt="image" />
+                            <label class="switch">
+                                <input type="checkbox" />
+                                <span class="slider"></span>
+                            </label>
                             <img src={deleteImg} alt="image" />
                         </td>
                     </tr>
@@ -45,7 +46,10 @@ const Table = () => {
                             fontWeight: 700
                         }}>Disconnected</td>
                         <td>
-                            <img src={switchOff} alt="image" />
+                            <label class="switch">
+                                <input type="checkbox" disabled />
+                                <span class="slider"></span>
+                            </label>
                             <img src={deleteImg} alt="image" />
                         </td>
                     </tr>
