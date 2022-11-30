@@ -52,6 +52,18 @@
         input:checked + .slider:before {
             transform: translateX(18px);
         }
+
+        input:checked + .slid:before {
+            transform: translateX(0);
+        }
+
+        input:checked + .slid {
+            background-color: #ccc;
+        }
+          
+        input:focus + .slid {
+            box-shadow: 0 0 1px #ccc;
+        }
     }
 
     h3 {
@@ -90,6 +102,7 @@
         &:last-child {
             img {
                 margin: 0 5px;
+                cursor: pointer;
             }
         }
     }
@@ -102,5 +115,79 @@
         color:#8B8B8B;
         font-weight: 700;
         font-size: 16px;
+    }
+}
+
+.disable {
+    background-color: #FFFFFF;
+    width: 450px;
+    height: 230px;
+    margin: auto;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    top: -300px;
+    z-index: 1000;
+    box-shadow: 0 0 10px 10000px rgba(0, 0, 0, .5);
+    animation: 1s add;
+
+    h2 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    p:first-child {
+        font-weight: 400;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+
+    > div:nth-child(3) {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+
+        p {
+            font-weight: 600;
+            font-size: 16px;
+            background-color: white;
+            padding: 10px;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        button {
+            font-weight: 600;
+            font-size: 16px;
+            padding: 10px;
+            width: 150px;
+            background-color: #E74F48;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 1.5px 1.5px #191919;
+        }
+    }
+}
+
+.confirm {
+    
+    > div:nth-child(3) {
+        justify-content: center;
+        margin-bottom: 10px;
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #00C805;
+        }
     }
 }

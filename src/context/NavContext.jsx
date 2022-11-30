@@ -7,6 +7,10 @@ export const NavContextProvider = ({children}) => {
 
     const navRef = useRef("");
     const div = useRef("");
+    const disable = useRef("");
+    const checkInput = useRef("");
+    const del = useRef("");
+    const delConfirm = useRef("");
 
     const navRefAnimation = [
         {left: "-100%", opacity: 0},
@@ -39,8 +43,32 @@ export const NavContextProvider = ({children}) => {
         div.current.style.display = "flex";
     }
 
+    const showDisable = () => {
+        disable.current.style.display = "flex";
+    }
+
+    const showDel = () => {
+        del.current.style.display = "flex";
+    }
+
+    const showDelConfirm = () => {
+        delConfirm.current.style.display = "flex";
+    }
+
     return (
-        <NavContext.Provider value={{navRef, showNav, hideNav, div, showDetails}}  >
+        <NavContext.Provider value={{navRef, 
+        showNav, 
+        hideNav, 
+        div, 
+        showDetails, 
+        showDisable, 
+        disable, 
+        checkInput,
+        del,
+        showDel,
+        delConfirm,
+        showDelConfirm
+        }}  >
             {children}
         </NavContext.Provider>
     )

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext, useRef } from 'react';
 import SideBar from '../components/SideBar';
 import Topbar from '../components/Topbar';
 import "../styles/trade-content.scss";
 import deleteImg from "../assets/delete.png";
+import warn from "../assets/warn-red.png";
+import NavContext from '../context/NavContext';
 
 const Table = () => {
+
+    const { showDisable, checkInput, showDel } = useContext(NavContext);
+
     return (
         <div className='table-parent'>
             <div>
@@ -30,11 +35,13 @@ const Table = () => {
                             fontWeight: 700
                         }}>Connected</td>
                         <td>
-                            <label class="switch">
-                                <input type="checkbox" />
-                                <span class="slider"></span>
+                            <label className="switch">
+                                <input type="checkbox" onChange={ () => {
+                                    showDisable();
+                                }} checked />
+                                <span ref={checkInput} className="slider"></span>
                             </label>
-                            <img src={deleteImg} alt="image" />
+                            <img onClick={showDel} src={deleteImg} alt="image" />
                         </td>
                     </tr>
                     <tr>
@@ -46,9 +53,9 @@ const Table = () => {
                             fontWeight: 700
                         }}>Disconnected</td>
                         <td>
-                            <label class="switch">
+                            <label className="switch">
                                 <input type="checkbox" disabled />
-                                <span class="slider"></span>
+                                <span className="slider"></span>
                             </label>
                             <img src={deleteImg} alt="image" />
                         </td>
@@ -58,6 +65,73 @@ const Table = () => {
         </div>
     )
 }
+
+const Disable = () => {
+    
+    const { disable, checkInput } = useContext(NavContext);
+
+    return (
+        <div ref={disable} className='disable'>
+            <img src={warn} alt="image" />
+            <div>
+                <h2>Disable account</h2>
+                <p>Are you sure you want to disable this account?</p>
+            </div>
+            <div>
+                <p onClick={() => disable.current.style.display = "none"}>No</p>
+                <button onClick={() => {
+                    if(!checkInput.current.classList.contains("slid")) {
+                        checkInput.current.classList.add("slid");
+                        checkInput.current.disable;
+                        disable.current.style.display = "none"
+                    }
+                }}>Yes</button>
+            </div>
+        </div>
+    )
+}
+
+const DeleteAccount = () => {
+    
+    const { del, showDelConfirm } = useContext(NavContext);
+
+    return (
+        <div ref={del} className='disable'>
+            <img src={deleteImg} alt="image" />
+            <div>
+                <h2>Delete account</h2>
+                <p>Are you sure you want to delete this account? This action can't be undone.</p>
+            </div>
+            <div>
+                <p onClick={() => del.current.style.display = "none"}>No</p>
+                <button onClick={() => {
+                    del.current.style.display = "none"
+                    showDelConfirm();
+                    console.log("init")
+                }}>Yes</button>
+            </div>
+        </div>
+    )
+}
+
+const DeleteAccountConfirmation = () => {
+    
+    const { delConfirm } = useContext(NavContext);
+
+    return (
+        <div ref={delConfirm} className='disable confirm'>
+            <img src={deleteImg} alt="image" />
+            <div>
+                <h2>Delete account</h2>
+                <p>Before you can delete this account, you are required to pay 20% profit share.</p>
+            </div>
+            <div>
+                <button>Pay Now</button>
+            </div>
+        </div>
+    )
+}
+
 
 function TradeContent() {
     return (
@@ -71,6 +145,9 @@ function TradeContent() {
             }}>
                 <Topbar />
                 <Table />
+                <Disable />
+                <DeleteAccount />
+                <DeleteAccountConfirmation />
             </div>
         </div>
     );
