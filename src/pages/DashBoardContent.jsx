@@ -113,7 +113,7 @@ function DashBoardContent() {
             <div style={{
                 width: "100%"
             }}>
-                <Topbar />
+                <Topbar title="Dashboard" />
                 <OpenContent />
                 <CloseContent />
             </div>

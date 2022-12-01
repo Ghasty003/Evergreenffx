@@ -7,7 +7,7 @@ import arrow from "../assets/Vector.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import NavContext from '../context/NavContext';
 
-function Topbar() {
+function Topbar({ title }) {
 
     const {showNav} = useContext(NavContext);
 
@@ -23,7 +23,7 @@ function Topbar() {
                     cursor: "pointer"
                 }}/>
             </div>
-            <h2>Dashboard</h2>
+            <h2>{ title }</h2>
                 <div className='wallet'>
                     <img src={wallet} alt="wallet" />
                     <div>

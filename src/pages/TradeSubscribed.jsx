@@ -15,7 +15,7 @@ function TradeSubscribed() {
             <div style={{
                 width: "100%"
             }}>
-                <Topbar />
+                <Topbar title="Trade" />
                 <Settings addImg={add} btnColor=" #191919" bg="#00C805" shadow="2px 2px black" />
                 <AddAccount />
             </div>

@@ -15,7 +15,7 @@ function DashboardSuspended() {
             <div style={{
                 width: "100%"
             }}>
-                <Topbar />
+                <Topbar title="Dashboard" />
                 <Suspended />
                 <Position text="open" head="Open" />
                 <Position text="closed" head="Closed" />

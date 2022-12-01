@@ -6,6 +6,7 @@ import dashboardDark from "../assets/dashboard-dark.png";
 import trade from "../assets/trade.png";
 import tradeDark from "../assets/trade-dark.png";
 import refresh from "../assets/refresh.png";
+import refreshDark from "../assets/clock.png";
 import profile from "../assets/profile-2user.png";
 import receipt from "../assets/receipt-text.png";
 import money from "../assets/money-send.png";
@@ -40,7 +41,7 @@ function SideBar() {
             </div>
             <Div to="/dashboard" imgd={dashboardDark} img={img1} text="Dashboard" />
             <Div to="/trade" img={trade} imgd={tradeDark} text="Trade" />
-            <Div to="/history" img={refresh} text="History" />
+            <Div to="/history" img={refresh} imgd={refreshDark} text="History" />
             <Div to="/referrals" img={profile} text="Referrals" />
             <Div to="/invoices" img={receipt} text="Invoices" />
             <Div to="/harvest" img={money} text="Harvest" />

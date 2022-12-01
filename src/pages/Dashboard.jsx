@@ -15,7 +15,7 @@ function Dashboard() {
             <div style={{
                 width: "100%"
             }}>
-                <Topbar />
+                <Topbar title="Dashboard" />
                 <Subscription />
                 <Position text="open" head="Open" />
                 <Position text="closed" head="Closed" />

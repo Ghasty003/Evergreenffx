@@ -17,7 +17,7 @@ function DashBoardWarning() {
             <div style={{
                 width: "100%"
             }}>
-                <Topbar />
+                <Topbar title="Dashboard" />
                 <Profit />
                 <Position text="open" head="Open" />
                 <Position text="closed" head="Closed" />

@@ -143,7 +143,7 @@ function TradeContent() {
             <div style={{
                 width: "100%"
             }}>
-                <Topbar />
+                <Topbar title="Trade" />
                 <Table />
                 <Disable />
                 <DeleteAccount />

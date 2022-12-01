@@ -15,7 +15,7 @@ function Trade() {
             <div style={{
                 width: "100%"
             }}>
-                <Topbar />
+                <Topbar title="Trade" />
                 <Subscription />
                 <Settings addImg={add} />
             </div>

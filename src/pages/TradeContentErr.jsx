@@ -70,7 +70,7 @@ function TradeContentErr() {
             <div style={{
                 width: "100%"
             }}>
-                <Topbar />
+                <Topbar title="Trade" />
                 <Suspended />
                 <Table />
             </div>

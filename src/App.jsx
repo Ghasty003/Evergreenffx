@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard';
 import DashBoardContent from './pages/DashBoardContent';
 import DashboardSuspended from './pages/DashBoardSuspended';
 import DashBoardWarning from './pages/DashBoardWarning';
+import History from './pages/History';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Trade from './pages/Trade';
@@ -36,6 +37,9 @@ function App() {
           <Route path='subscribed' element={<TradeSubscribed />} />
           <Route path='content' element={<TradeContent />} />
           <Route path='error' element={<TradeContentErr />} />
+        </Route>
+        <Route path='/history'>
+          <Route index element={<History />} />
         </Route>
      </Routes>
     </div>
