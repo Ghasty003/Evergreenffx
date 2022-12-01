@@ -17,6 +17,18 @@ $font: "DM Sans";
     }
 }
 
+@mixin special-mobile {
+    @media (max-width:1050px) and (min-width:1041px){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width:1070px) and (min-width:1051px){
+        @content;
+    }
+}
+
 .parent {
     display: flex;
     width: 100%;
@@ -27,11 +39,21 @@ $font: "DM Sans";
         text-align: center;
     }
 
+    @include special-mobile{
+        text-align: left !important;
+    }
+
     .side {
         width: 40%;
         @include mobile {
             display: none;
         }
+    }
+}
+
+.hal-form{
+    @include mobile{
+        padding-right:500px;
     }
 }
 
@@ -62,8 +84,8 @@ $font: "DM Sans";
     }
 
     .circle {
-        width: 1.25rem;
-        height: 1.25rem;
+        width: 2rem;
+        height: 2rem;
         background-color: $custom-bgcolor;
         margin: 2px;
         border-radius: 50%;
@@ -139,6 +161,14 @@ $font: "DM Sans";
                 width: 300px;
             }
 
+            @include special-mobile{
+                width:500px !important;
+            }
+
+            @include tablet {
+                width:500px !important;
+            }
+
             p {
                 font-family: $font;
                 font-size: 0.625rem;
@@ -163,7 +193,13 @@ $font: "DM Sans";
             width: 330px;
             margin-top: 20px;
             @include small-screen {
-                width: 300px;
+                width: 80%;
+            }
+
+            @include mobile {
+                justify-content: center;
+                    gap: 10px;
+                    width:100%;
             }
 
             div {
@@ -214,6 +250,7 @@ $font: "DM Sans";
         justify-content: flex-start;
         align-items: center;
         gap: 5px;
+        font-weight:700;
 
         p {
             font: {

@@ -19,8 +19,9 @@ $font: "DM Sans";
 .verify-main {
     width: 60%;
     display: flex;
-    padding-left: 100px;
+    padding-left: 6.25rem;
     flex-direction: column;
+    margin-top:5%;
     @include mobile {
         width: 100%;
         align-items: center;
@@ -40,8 +41,8 @@ $font: "DM Sans";
     }
 
     .circle {
-        width: 20px;
-        height: 20px;
+        width: 2rem;
+        height: 2rem;
         background-color: $custom-bgcolor;
         margin: 2px;
         border-radius: 50%;
