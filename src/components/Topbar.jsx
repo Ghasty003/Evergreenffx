@@ -27,7 +27,7 @@ function Topbar({ title }) {
                 <div className='wallet'>
                     <img src={wallet} alt="wallet" />
                     <div>
-                        <p>wallet balance</p>
+                        <p>Profit</p>
                         <h3>$500</h3>
                     </div>
                     <img src={eye} alt="image" />
