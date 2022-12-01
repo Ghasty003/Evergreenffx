@@ -8,6 +8,7 @@ import tradeDark from "../assets/trade-dark.png";
 import refresh from "../assets/refresh.png";
 import refreshDark from "../assets/clock.png";
 import profile from "../assets/profile-2user.png";
+import profileDark from "../assets/people.png";
 import receipt from "../assets/receipt-text.png";
 import money from "../assets/money-send.png";
 import coin from '../assets/coin.png';
@@ -42,7 +43,7 @@ function SideBar() {
             <Div to="/dashboard" imgd={dashboardDark} img={img1} text="Dashboard" />
             <Div to="/trade" img={trade} imgd={tradeDark} text="Trade" />
             <Div to="/history" img={refresh} imgd={refreshDark} text="History" />
-            <Div to="/referrals" img={profile} text="Referrals" />
+            <Div to="/referrals" img={profile} imgd={profileDark} text="Referrals" />
             <Div to="/invoices" img={receipt} text="Invoices" />
             <Div to="/harvest" img={money} text="Harvest" />
             <Div to="/bonuses" img={coin} text="Bonuses" />

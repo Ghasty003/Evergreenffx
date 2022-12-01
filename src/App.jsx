@@ -9,6 +9,8 @@ import DashBoardWarning from './pages/DashBoardWarning';
 import History from './pages/History';
 import HistoryContent from './pages/HistoryContent';
 import Login from './pages/Login';
+import Referrals from './pages/Referral';
+import ReferralContent from './pages/ReferralContent';
 import Signup from './pages/Signup';
 import Trade from './pages/Trade';
 import TradeContent from './pages/TradeContent';
@@ -42,6 +44,10 @@ function App() {
         <Route path='/history'>
           <Route index element={<History />} />
           <Route path='content' element={<HistoryContent />} />
+        </Route>
+        <Route path='/referrals'>
+          <Route index element={<Referrals />} />
+          <Route path='content' element={<ReferralContent />} />
         </Route>
      </Routes>
     </div>

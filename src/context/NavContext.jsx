@@ -11,6 +11,7 @@ export const NavContextProvider = ({children}) => {
     const checkInput = useRef("");
     const del = useRef("");
     const delConfirm = useRef("");
+    const withdrawal = useRef("");
 
     const navRefAnimation = [
         {left: "-100%", opacity: 0},
@@ -55,6 +56,10 @@ export const NavContextProvider = ({children}) => {
         delConfirm.current.style.display = "flex";
     }
 
+    const showWithdrawal = () => {
+        withdrawal.current.style.display = "flex";
+    }
+
     return (
         <NavContext.Provider value={{navRef, 
         showNav, 
@@ -67,7 +72,9 @@ export const NavContextProvider = ({children}) => {
         del,
         showDel,
         delConfirm,
-        showDelConfirm
+        showDelConfirm,
+        withdrawal,
+        showWithdrawal
         }}  >
             {children}
         </NavContext.Provider>

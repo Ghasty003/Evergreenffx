@@ -1,0 +1,62 @@
+.referral-custom {
+    width: 95%;
+    margin: 20px auto;
+
+    h2 {
+        font-weight: 400;
+        font-size: 18px;
+        color: #191919;
+    }
+
+    > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+
+        > div:first-child {
+            background-color:#00C805;
+        }
+
+        > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            width: 250px;
+            height: 90px;
+            background: #FFFFFF;
+            border: 1px solid #191919;
+            border-radius: 16px;
+
+            p {
+                color: #191919;
+            }
+
+            p:first-child {
+                font-weight: 400;
+                font-size: 14px;
+            }
+
+            p:nth-child(2) {
+                font-weight: 600;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.referral-people {
+    background-color: #FFFFFF;
+    padding: 15px;
+    width: 95%;
+    margin: 30px auto;
+    text-align: center;
+    border-radius: 10px;
+
+    p {
+        font-weight: 400;
+        font-size: 14px;
+        color: #191919;
+    }
+}
