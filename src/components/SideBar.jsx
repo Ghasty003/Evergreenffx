@@ -12,6 +12,7 @@ import profileDark from "../assets/people.png";
 import receipt from "../assets/receipt-text.png";
 import money from "../assets/money-send.png";
 import coin from '../assets/coin.png';
+import coinDark from "../assets/coin-dark.png";
 import logout from '../assets/logout.png';
 import NavContext from '../context/NavContext';
 import { FaTimes } from "react-icons/fa";
@@ -44,9 +45,9 @@ function SideBar() {
             <Div to="/trade" img={trade} imgd={tradeDark} text="Trade" />
             <Div to="/history" img={refresh} imgd={refreshDark} text="History" />
             <Div to="/referrals" img={profile} imgd={profileDark} text="Referrals" />
+            <Div to="/bonuses" img={coin} imgd={coinDark} text="Bonuses" />
             <Div to="/invoices" img={receipt} text="Invoices" />
             <Div to="/harvest" img={money} text="Harvest" />
-            <Div to="/bonuses" img={coin} text="Bonuses" />
             <div className='line'></div>
             <div className='logout'>
                 <img src={logout} alt="image" />

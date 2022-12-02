@@ -1,0 +1,40 @@
+.bonuses-parent {
+
+   .ranking {
+        td {
+            font-weight: 700;
+        }
+   }
+
+    th, td {
+        position: relative;
+        left: -100px;
+    }
+
+    button {
+        background: #AEAEAE;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        padding: 8px;
+    }
+}
+
+.bonuses-header {
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid rgb(213, 213, 213);
+    margin: 10px;
+    margin-left: 20px;
+    padding: 10px 10px 0 0px;
+
+    p {
+        cursor: pointer;
+    }
+    
+    .active {
+        color: #00C805;
+        font-weight: 700;
+        border-bottom: 1px solid #00C805;
+    }
+}

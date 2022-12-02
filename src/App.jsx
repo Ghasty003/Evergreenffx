@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
 import '../src/styles/App.scss';
+import Bonuses from './pages/Bonuses';
 import CreateAccount from './pages/CreateAccount';
 import Dashboard from './pages/Dashboard';
 import DashBoardContent from './pages/DashBoardContent';
@@ -48,6 +49,9 @@ function App() {
         <Route path='/referrals'>
           <Route index element={<Referrals />} />
           <Route path='content' element={<ReferralContent />} />
+        </Route>
+        <Route path='/bonuses'>
+          <Route index element={<Bonuses />} />
         </Route>
      </Routes>
     </div>
