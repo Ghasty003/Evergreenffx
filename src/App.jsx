@@ -7,6 +7,8 @@ import Dashboard from './pages/Dashboard';
 import DashBoardContent from './pages/DashBoardContent';
 import DashboardSuspended from './pages/DashBoardSuspended';
 import DashBoardWarning from './pages/DashBoardWarning';
+import Harvest from './pages/Harvest';
+import HarvestContent from './pages/HarvestContent';
 import History from './pages/History';
 import HistoryContent from './pages/HistoryContent';
 import Invoices from './pages/Invoices';
@@ -56,6 +58,10 @@ function App() {
         <Route path='/invoices'>
           <Route index element={<Invoices />} />
           <Route path='content' element={<InvoicesContent />} />
+        </Route>
+        <Route path='/harvest'>
+          <Route index element={<Harvest />} />
+          <Route path='content' element={<HarvestContent />} />
         </Route>
      </Routes>
     </div>

@@ -12,6 +12,7 @@ import profileDark from "../assets/people.png";
 import receipt from "../assets/receipt-text.png";
 import receiptDark from "../assets/receipt-bold.png";
 import money from "../assets/money-send.png";
+import moneyDark from "../assets/money-dark.png";
 import coin from '../assets/coin.png';
 import coinDark from "../assets/coin-dark.png";
 import logout from '../assets/logout.png';
@@ -48,7 +49,7 @@ function SideBar() {
             <Div to="/referrals" img={profile} imgd={profileDark} text="Referrals" />
             <Div to="/bonuses" img={coin} imgd={coinDark} text="Bonuses" />
             <Div to="/invoices" img={receipt} imgd={receiptDark} text="Invoices" />
-            <Div to="/harvest" img={money} text="Harvest" />
+            <Div to="/harvest" img={money} imgd={moneyDark} text="Harvest" />
             <div className='line'></div>
             <div className='logout'>
                 <img src={logout} alt="image" />
