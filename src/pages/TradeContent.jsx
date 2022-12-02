@@ -20,7 +20,7 @@ const Table = () => {
             <table>
                 <tbody>
                     <tr>
-                        <th>Acound ID</th>
+                        <th>Acount ID</th>
                         <th>Broker</th>
                         <th>Added On</th>
                         <th>Login State</th>

@@ -144,6 +144,7 @@ const Content = () => {
                         first.current.classList.remove("active");
                         third.current.classList.remove("active");
                         setRender(<FirstLevel />)
+                        setToMegaphone();
                     }
                 }} ref={second}>2nd Level</p>
                 <p  onClick={() => {
@@ -153,6 +154,7 @@ const Content = () => {
                         second.current.classList.remove("active");
                         first.current.classList.remove("active");
                         setRender(<FirstLevel />)
+                        setToMegaphone();
                     }
                 }} ref={third}>3rd Level</p>
             </div>

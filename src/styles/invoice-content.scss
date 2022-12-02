@@ -1,0 +1,44 @@
+.invoice-search {
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #D1D1D1;
+        border-radius: 8px;
+        width: 250px;
+        height: 40px;
+        padding: 10px;
+        overflow: hidden;
+
+        input {
+            flex: 1;
+            height: inherit;
+            border: none;
+            outline: none;
+
+            &::placeholder {
+                color: #8B8B8B;
+            }
+        }
+    }
+}
+
+.invoice-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    button {
+        background:#00C805;
+        padding: 6px;
+        border-radius: 8px;
+        border: none;
+        font-weight: 400;
+        font-size: 14px;
+        box-shadow: 1px 1px black;
+    }
+}

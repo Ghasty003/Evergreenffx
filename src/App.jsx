@@ -9,6 +9,8 @@ import DashboardSuspended from './pages/DashBoardSuspended';
 import DashBoardWarning from './pages/DashBoardWarning';
 import History from './pages/History';
 import HistoryContent from './pages/HistoryContent';
+import Invoices from './pages/Invoices';
+import InvoicesContent from './pages/InvoicesContent';
 import Login from './pages/Login';
 import Referrals from './pages/Referral';
 import ReferralContent from './pages/ReferralContent';
@@ -50,8 +52,10 @@ function App() {
           <Route index element={<Referrals />} />
           <Route path='content' element={<ReferralContent />} />
         </Route>
-        <Route path='/bonuses'>
-          <Route index element={<Bonuses />} />
+        <Route path='/bonuses' element={<Bonuses />} />
+        <Route path='/invoices'>
+          <Route index element={<Invoices />} />
+          <Route path='content' element={<InvoicesContent />} />
         </Route>
      </Routes>
     </div>
