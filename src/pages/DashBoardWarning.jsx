@@ -19,7 +19,6 @@ function DashBoardWarning() {
             }}>
                 <Topbar title="Dashboard" />
                 <Profit />
-                <Position text="open" head="Open" />
                 <Position text="closed" head="Closed" />
             </div>
         </div>

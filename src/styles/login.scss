@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-$primary: #00855D;
+$primary: #00C805;
 $custom-bgcolor: #D1D1D1;
 $font: "DM Sans";
 
@@ -131,10 +131,13 @@ $font: "DM Sans";
             background-color: $primary;
             border: none;
             border-radius: 8px;
-            color: white;
+            color: #191919;
+            font-weight: bold;
+            font-size: 16px;
             text-align: center;
             margin: 20px 0;
             cursor: pointer;
+            box-shadow: 1.5px 1.5px #191919;
         }
 
         .last-content {

@@ -17,7 +17,7 @@ function Trade() {
             }}>
                 <Topbar title="Trade" />
                 <Subscription />
-                <Settings addImg={add} />
+                <Settings addImg={add} cursor="not-allowed"/>
             </div>
         </div>
     );

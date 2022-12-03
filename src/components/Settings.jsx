@@ -3,7 +3,7 @@ import '../styles/settings.scss';
 import puzzle from "../assets/oc-puzzle.svg";
 import NavContext from '../context/NavContext';
 
-function Settings({ addImg, btnColor, bg, shadow}) {
+function Settings({ addImg, btnColor, bg, shadow, cursor}) {
 
     const { showDetails } = useContext(NavContext);
 
@@ -17,7 +17,8 @@ function Settings({ addImg, btnColor, bg, shadow}) {
                 <button onClick={showDetails} style={{
                     color: btnColor,
                     background: bg,
-                    boxShadow: shadow
+                    boxShadow: shadow,
+                    cursor: cursor
                 }}><img src={addImg} alt="image" /> Add account</button>
             </div>
             <div>

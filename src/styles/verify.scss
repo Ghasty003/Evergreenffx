@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=DM Sans");
 
-$primary: #00855D;
+$primary: #00C805;
 $custom-bgcolor: #D1D1D1;
 $font: "DM Sans";
 
@@ -97,6 +97,7 @@ $font: "DM Sans";
             }
             p {
                 margin-top: 3px;
+                width: 520px;
                 font: {
                     size: 1.125rem;
                     family: $font;
@@ -104,6 +105,7 @@ $font: "DM Sans";
                 color: #8B8B8B;
                 @include small-screen {
                     font-size: 1.025rem;
+                    width: fit-content;
                 }
             }
         }
@@ -143,15 +145,23 @@ $font: "DM Sans";
             }
 
             button {
-                width: 15rem;
-                height: 3.25rem;
+                width: 240px;
+                height: 52px;
                 background-color: $primary;
                 border: none;
                 border-radius: 8px;
-                color: white;
+                color: #191919;
+                font-weight: bold;
+                font-size: 16px;
                 text-align: center;
-                margin: 20px 0;
                 cursor: pointer;
+                box-shadow: 1.5px 1.5px #191919;
+
+                &:nth-child(2) {
+                    margin: 20px 0;
+                    background: white;
+                    border: 1px solid #191919;
+                }
             }
         }
     }

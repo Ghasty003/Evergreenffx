@@ -26,6 +26,8 @@ $font: "DM Sans";
     background: #FFFFFF;
     border: 1px solid #FAFAFA;
     font-family: $font;
+    position: sticky;
+    top: 0;
     @include mobile {
         position: fixed;
         top: 0;

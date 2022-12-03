@@ -9,6 +9,11 @@ function Profit() {
                 <img src={img} alt="image" />
                 <div>
                     <h3>Your profit sharing of 20% is due, click to pay.</h3>
+                    <p style={{
+                        marginTop: "5px"
+                    }}>You have <span style={{
+                        fontWeight: "bold",
+                    }}>3d 20hr 15m 10s</span> to make payment.</p>
                     <p>Check the invoice tab for more details.</p>
                 </div>
             </div>

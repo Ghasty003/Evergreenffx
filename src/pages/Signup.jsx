@@ -33,11 +33,11 @@ function Signup() {
             }
         } else if( e.target.value.length < 6 ) {
             strength.current.innerHTML = "Weak"
-            div1.current.style.background = "#2B9978"
+            div1.current.style.background = "#00C805"
         }
         if (e.target.value.length >= 6 && /[A-Z]/.test(e.target.value)) {
             strength.current.innerHTML = "Medium";
-            div2.current.style.background = "#2B9978";
+            div2.current.style.background = "#00C805";
         } else {
             div2.current.style.background = "#D1D1D1";
             if (strength.current.innerHTML == "Medium") {
@@ -46,7 +46,7 @@ function Signup() {
         }
         if(e.target.value.length >= 6 && /[A-Z]/.test(e.target.value) && /[^a-zA-Z0-9]/.test(e.target.value)) {
             strength.current.innerHTML = "Strong";
-            div3.current.style.background = "#2B9978";
+            div3.current.style.background = "#00C805";
         } else {
             div3.current.style.background = "#D1D1D1";
             if (strength.current.innerHTML == "Strong") {
@@ -88,7 +88,7 @@ function Signup() {
 
                     <div>
                         <p>Phone number</p>
-                        <input type="tel" placeholder="+101118097" required />
+                        <input type="number" placeholder="+101118097" required />
                     </div>
 
                     <div className="password">

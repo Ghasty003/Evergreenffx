@@ -17,7 +17,6 @@ function DashboardSuspended() {
             }}>
                 <Topbar title="Dashboard" />
                 <Suspended />
-                <Position text="open" head="Open" />
                 <Position text="closed" head="Closed" />
             </div>
         </div>

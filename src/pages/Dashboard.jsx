@@ -17,7 +17,6 @@ function Dashboard() {
             }}>
                 <Topbar title="Dashboard" />
                 <Subscription />
-                <Position text="open" head="Open" />
                 <Position text="closed" head="Closed" />
             </div>
         </div>

@@ -14,6 +14,11 @@ const Input = () => {
         
         OTPinput.forEach( (input, index) => {
             input.addEventListener("input", () => {
+
+                if (input.value.length > 1) {
+                    input.value = input.value.slice(0, 1);
+                }
+
                 for( let i = 0; i < index + 1; i++ ) {
                     i < 5 ?  OTPinput[i + 1].focus() : ""
 
@@ -46,12 +51,20 @@ function Verify() {
                 <div className="main-content">
                     <div>
                         <h2>Verify OTP</h2>
-                        <p>Input the OTP sent to samuelomorayewa17@gmail.com</p>
+                        <p>Verify your email to help us confirm your access to the email provided.</p>
                     </div>
+
+                    <p style={{
+                        fontWeight: 700,
+                        fontSize: '14px',
+                        marginTop: "7px",
+                        color: "#696969"
+                    }}>Not your email? <span style={{
+                        color: "#00C805"
+                    }}>Go back</span></p>
 
                     <form action="" onSubmit={(e) => {
                         e.preventDefault();
-                        navigate("/signup")
                     }}>
                         <div className="otp">
                             <Input />
@@ -61,7 +74,8 @@ function Verify() {
                             <Input />
                             <Input />
                         </div>
-                        <button>Verify</button>
+                        <button>Re-enter email</button> <br />
+                        <button onClick={() => navigate("/signup")}>Verify</button>
                     </form>
                 </div>
             </main>

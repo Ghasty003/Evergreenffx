@@ -41,7 +41,7 @@ function Login() {
 
                 <div className="password">
                     <p>Password</p>
-                    <input type="password" className="pass" ref={passwordInput} />
+                    <input type="password" className="pass" ref={passwordInput} required />
                     <i>
                         { seePass ? <FiEyeOff className='see-pass' onClick={hidePassword} />
                             : <IoEyeOutline className='see-pass' onClick={seePassword} />
@@ -50,12 +50,13 @@ function Login() {
                     </div>
                 <p>Forgot Password</p>
 
-                <button>Login</button>
+                <Link to="/dashboard"><button>Login</button></Link>
 
                 <div className="last-content">
                     <p>New on our platform?</p>
-                    <Link to="/" style={{textDecoration: "none", color: "#00855D", 
-                    fontFamily: "DM Sans"
+                    <Link to="/" style={{textDecoration: "none", color: "#00C805", 
+                    fontFamily: "DM Sans",
+                    fontWeight: "700"
                 }}>Create an account</Link>
                 </div>
             </form>
