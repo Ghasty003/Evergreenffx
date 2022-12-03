@@ -1,10 +1,11 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext } from 'react';
 import SideBar from '../components/SideBar';
 import Topbar from '../components/Topbar';
 import "../styles/trade-content.scss";
 import deleteImg from "../assets/delete.png";
 import warn from "../assets/warn-red.png";
 import NavContext from '../context/NavContext';
+import { FaTimes } from 'react-icons/fa';
 
 const Table = () => {
 
@@ -104,10 +105,9 @@ const DeleteAccount = () => {
             </div>
             <div>
                 <p onClick={() => del.current.style.display = "none"}>No</p>
-                <button onClick={() => {
+                <button className='b' onClick={() => {
                     del.current.style.display = "none"
                     showDelConfirm();
-                    console.log("init")
                 }}>Yes</button>
             </div>
         </div>
@@ -120,7 +120,26 @@ const DeleteAccountConfirmation = () => {
 
     return (
         <div ref={delConfirm} className='disable confirm'>
-            <img src={deleteImg} alt="image" />
+            <section style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                // background: "red",
+                width: "90%",
+                paddingTop: "10px"
+            }}>
+                <img src={deleteImg} alt="image" />
+                <i onClick={() => delConfirm.current.style.display = "none"} style={{
+                    backgroundColor: "rgb(237, 232, 232)",
+                    borderRadius: "50%",
+                    textAlign: "center",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "8px",
+                    cursor: "pointer"
+                }}><FaTimes /></i>
+            </section>
             <div>
                 <h2>Delete account</h2>
                 <p>Before you can delete this account, you are required to pay 20% profit share.</p>
@@ -134,6 +153,7 @@ const DeleteAccountConfirmation = () => {
 
 
 function TradeContent() {
+    
     return (
         <div style={{
             display: "flex",

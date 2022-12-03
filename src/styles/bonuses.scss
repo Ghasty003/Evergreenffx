@@ -6,9 +6,17 @@
         }
    }
 
-    th, td {
-        position: relative;
-        left: -100px;
+    th {
+        text-align: left;
+
+        &:first-child {
+            position: relative;
+            left: 10px;
+        }
+    }
+
+    td {
+        text-align: left;
     }
 
     button {
@@ -36,5 +44,13 @@
         color: #00C805;
         font-weight: 700;
         border-bottom: 1px solid #00C805;
+    }
+}
+
+.referral-custom {
+    > div {
+        > div:first-child {
+            margin-left: -15px;
+        }
     }
 }
