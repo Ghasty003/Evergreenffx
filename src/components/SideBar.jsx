@@ -37,6 +37,18 @@ function SideBar() {
 
     const {navRef, hideNav} = useContext(NavContext);
 
+    document.addEventListener("click", (e) => {
+        if(!e.target.matches(".side-parent") && 
+            !e.target.matches(".side-parent div > *") &&
+            !e.target.matches("svg") &&
+            ! navRef.current.classList.contains("toggle")
+        ) {
+            hideNav();
+        } else {
+            console.log("match")
+        }
+    })
+
     return (
         <div ref={navRef} className='side-parent toggle'>
             <div>

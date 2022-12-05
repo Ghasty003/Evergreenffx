@@ -3,14 +3,14 @@
 $primary: #00855D;
 $font: "DM Sans";
 
-@mixin mobile {
+@mixin tablet {
     @media (max-width:806px) {
         @content;
     }
 }
 
 .toggle {
-    @include mobile {
+    @include tablet {
         left: -100%;
     }
 }
@@ -28,11 +28,12 @@ $font: "DM Sans";
     font-family: $font;
     position: sticky;
     top: 0;
-    @include mobile {
+    @include tablet {
         position: fixed;
         top: 0;
         z-index: 100;
-        width: 100%;
+        width: 40%;
+        // align-items: center;
     }
 
     .active {
@@ -55,7 +56,7 @@ $font: "DM Sans";
         width: 100%;
 
         img {
-            margin-bottom: 10px;
+            margin-bottom: 30px;
         }
 
         .icon {
@@ -64,7 +65,7 @@ $font: "DM Sans";
             top: 15px;
             cursor: pointer;
             display: none;
-            @include mobile {
+            @include tablet {
                 display: block;
             }
         }

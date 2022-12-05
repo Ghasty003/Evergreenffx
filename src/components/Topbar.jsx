@@ -24,6 +24,7 @@ function Topbar({ title }) {
                 }}/>
             </div>
             <h2>{ title }</h2>
+            <div className='container'>
                 <div className='wallet'>
                     <img src={wallet} alt="wallet" />
                     <div>
@@ -32,7 +33,6 @@ function Topbar({ title }) {
                     </div>
                     <img src={eye} alt="image" />
                 </div>
-            <div className='container'>
                 <div className='user'>
                     <img src={pic} alt="user image" />
                     <div>
