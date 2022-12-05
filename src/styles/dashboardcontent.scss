@@ -1,3 +1,9 @@
+@mixin mobile {
+    @media (max-width: 450px) {
+        @content;
+    }
+}
+
 .content-parent {
     background-color: #FFFFFF;
     width: 95%;
@@ -28,6 +34,10 @@
         font-weight: 400;
         font-size: 14px;
         color: #191919;
+        @include mobile {
+            font-size: 12px;
+            padding: 10px;
+        }
     }
 
     tr:last-child td {
@@ -38,5 +48,8 @@
         color:#8B8B8B;
         font-weight: 700;
         font-size: 16px;
+        @include mobile {
+            font-size: 14px;
+        }
     }
 }

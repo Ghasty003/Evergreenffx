@@ -40,7 +40,8 @@ function SideBar() {
     document.addEventListener("click", (e) => {
         if(!e.target.matches(".side-parent") && 
             !e.target.matches(".side-parent div > *") &&
-            !e.target.matches("svg") &&
+            !e.target.matches(".menu") &&
+            !e.target.matches(".menu > *") &&
             !navRef.current.classList.contains("toggle")
         ) {
             hideNav();

@@ -6,7 +6,7 @@ function Subscription() {
     return (
         <div className='sub-parent'>
             <div>
-                <div className=''>
+                <div>
                     <h3>Your subscription is inactive</h3>
                     <p>You can check your invoices tab for more details or click to subscribe.</p>
                     <button>Subscribe</button>

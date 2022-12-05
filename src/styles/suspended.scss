@@ -1,5 +1,5 @@
 @mixin mobile {
-    @media (max-width:806px) {
+    @media (max-width:560px) {
         @content;
     }
 }
@@ -17,11 +17,9 @@
     margin-bottom: 15px;
     color: #FFFFFF;
     position: relative;
-    // @include mobile {
-    //     height: 300px;
-    //     flex-direction: column;
-    //     padding: 20px 0 20px 0;
-    // }
+    @include mobile {
+        height: 150px;
+    }
 
    > div {
     display: flex;
@@ -34,6 +32,10 @@
     background-position: center;
     object-fit: fill;
     padding: 40px;
+    @include mobile {
+        flex-direction: column;
+        text-align: center;
+    }
     > img {
         width: 200px;
         position: relative;
@@ -50,10 +52,6 @@
         @include tablet {
             margin-left: -12px;
         }
-        // @include mobile {
-        //     flex-direction: column;
-        //     align-items: center;
-        // }
 
         h3 {
             font-weight: 700;
@@ -65,18 +63,22 @@
             font-size: 14px;
             width: 350px;
             margin: 8px 0;
-            // @include mobile {
-            //     width: 300px;
-            // }
         }
 
         img {
             width: 40px;
             height: 40px;
+            @include mobile {
+                display: none;
+            }
         }
     }
 
     > div:last-child {
+        @include mobile {
+            width: 90%;
+        }
+
         button {
             background-color: #FFFFFF;
             color: #191919;
@@ -85,9 +87,9 @@
             border-radius: 5px;
             cursor: pointer;
             box-shadow: 1.5px 1.5px #191919;
-            // @include mobile {
-            //     margin: 10px 0;
-            // }
+            @include mobile {
+                width: 100%;
+            }
         }
     }
    }

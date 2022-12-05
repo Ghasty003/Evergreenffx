@@ -4,6 +4,12 @@
     }
 }
 
+@mixin mobile {
+    @media (max-width:500px) {
+        @content;
+    }
+}
+
 .profit {
     background-color: #F2CC33;
     display: flex;
@@ -12,22 +18,21 @@
     justify-content: space-around;
     align-items: center;
     margin-bottom: 15px;
-    // @include tablet {
-    //     height: 150px;
-    //     flex-direction: column;
-    //     padding: 15px;
-    // }
+    @include mobile {
+        height: 150px;
+        flex-direction: column;
+    }
 
     > div:first-child {
         display: flex;
         gap: 20px;
-        // @include tablet {
-        //     margin-top: 20px;
-        // }
 
         img {
             width: 40px;
             height: 40px;
+            @include mobile {
+                display: none;
+            }
         }
 
         h3 {
@@ -48,6 +53,10 @@
     }
 
     > div:last-child {
+        @include mobile {
+            width: 90%;
+        }
+
         button {
             background-color: #FFFFFF;
             color: #191919;
@@ -56,9 +65,9 @@
             border-radius: 5px;
             cursor: pointer;
             box-shadow: 1.5px 1.5px #191919;
-            // @include tablet {
-            //     margin: 10px 0;
-            // }
+            @include mobile {
+               width: 100%;
+            }
         }
     }
 }
