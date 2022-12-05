@@ -41,7 +41,7 @@ function SideBar() {
         if(!e.target.matches(".side-parent") && 
             !e.target.matches(".side-parent div > *") &&
             !e.target.matches("svg") &&
-            ! navRef.current.classList.contains("toggle")
+            !navRef.current.classList.contains("toggle")
         ) {
             hideNav();
         }
