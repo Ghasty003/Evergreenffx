@@ -9,6 +9,12 @@ $primary: #00855D;
     }
 }
 
+@mixin mobile {
+    @media (max-width:550px) {
+        @content;
+    }
+}
+
 .top-parent {
     display: flex;
     justify-content: space-between;
@@ -37,6 +43,9 @@ $primary: #00855D;
             display: flex;
             align-items: center;
             gap: 10px;
+            @include mobile {
+                gap: 2px;
+            }
     
             > img:first-child {
                 @include tablet {
@@ -70,17 +79,27 @@ $primary: #00855D;
             height: 60px;
             background: #FAFAFA;
             border-radius: 8px;
-            @include tablet {
-                // width: 140px;
-                // position: absolute;
-                // left: calc(50% - 50px);
-                // bottom: 10px;
-                // padding: 35px 16px;
+            @include mobile {
+                width: 123px;
+                position: relative;
+                left: 15px;
+                gap: 0px;
+                padding: 8px 10px;
             }
     
             img {
                 @include tablet {
                     width: 30px;
+                }
+
+                &:first-child {
+                    margin-right: 3px;
+                }
+                
+                &:last-child {
+                    @include mobile {
+                        width: 20px;
+                    }
                 }
             }
     
@@ -125,6 +144,9 @@ $primary: #00855D;
                 font-size: 18px;
                 position: relative;
                 top: 10px;
+            }
+            @include mobile {
+                display: none;
             }
         }
 
