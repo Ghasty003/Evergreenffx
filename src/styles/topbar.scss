@@ -24,7 +24,7 @@ $primary: #00855D;
         position: relative;
         height: 170px;
         align-items: flex-start;
-        // z-index: -100;
+        padding-top: 50px;
     }
 
     .container {
@@ -36,6 +36,7 @@ $primary: #00855D;
         .user {
             display: flex;
             align-items: center;
+            gap: 10px;
     
             > img:first-child {
                 @include tablet {
@@ -109,24 +110,29 @@ $primary: #00855D;
         }
     }
 
-    
-    h2 {
-        font-family: 'DM Sans';
-        font-weight: 700;
-        font-size: 20px;
-        color: #191919;
+    .menu {
+        display: flex;
+        gap: 10px;
         margin-left: 10px;
-        @include tablet {
-            font-size: 18px;
-            position: relative;
-            top: 10px;
+
+        h2 {
+            font-family: 'DM Sans';
+            font-weight: 700;
+            font-size: 20px;
+            color: #191919;
+            margin-left: 10px;
+            @include tablet {
+                font-size: 18px;
+                position: relative;
+                top: 10px;
+            }
+        }
+
+        .icon {
+            display: none;
+            @include tablet {
+                display: block;
+            }
         }
     }
-
-   .menu {
-    display: none;
-    @include tablet {
-        display: block;
-    }
-   }
 }

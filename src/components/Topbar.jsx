@@ -13,17 +13,15 @@ function Topbar({ title }) {
 
     return (
         <div className='top-parent'>
-            <div className='menu' style={{
-                marginRight: "20px"
-            }}>
-                <AiOutlineMenu onClick={showNav} style={{
+            <div className='menu'>
+                <AiOutlineMenu className='icon' onClick={showNav} style={{
                     fontSize: "20px",
                     position: "relative",
                     top: "12px",
                     cursor: "pointer"
                 }}/>
+                <h2>{ title }</h2>
             </div>
-            <h2>{ title }</h2>
             <div className='container'>
                 <div className='wallet'>
                     <img src={wallet} alt="wallet" />

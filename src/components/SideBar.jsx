@@ -44,8 +44,6 @@ function SideBar() {
             ! navRef.current.classList.contains("toggle")
         ) {
             hideNav();
-        } else {
-            console.log("match")
         }
     })
 
