@@ -4,6 +4,12 @@
     }
 }
 
+@mixin mobile {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+
 .add-parent {
     background-color: #FFFFFF;
     width: 500px;
@@ -22,6 +28,9 @@
     animation: 1s add;
     @include tablet {
         width: 350px;
+    }
+    @include mobile {
+        width: 310px;
     }
 
     > div {
@@ -53,9 +62,12 @@
             font-size: 12px;
             position: relative;
             top: -15px;
-            left: -120px;
+            left: -130px;
             @include tablet {
                 left: -60px;
+            }
+            @include mobile {
+                left: -45px;
             }
 
             img {

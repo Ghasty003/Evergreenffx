@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SideBar from '../components/SideBar';
 import Topbar from '../components/Topbar';
 import Suspended from '../components/Suspended';
@@ -6,6 +6,19 @@ import "../styles/trade-content.scss";
 import deleteImg from "../assets/delete.png";
 
 const Table = () => {
+
+    const [width, setWidth] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            if (window.innerWidth <= 400) {
+                setWidth(true);
+            } else {
+                setWidth(false);
+            }
+        })
+    }, [width]);
+
     return (
         <div className='table-parent'>
             <div>
@@ -25,15 +38,15 @@ const Table = () => {
                     <tr>
                         <td>75849</td>
                         <td>MT4</td>
-                        <td>15 May 2022 8:00 am</td>
+                        <td>{ width ? "1/7/22" : "15 May 2022 8:00 am"}</td>
                         <td style={{
                             color: "#00C805",
                             fontWeight: 700
                         }}>Connected</td>
                         <td>
-                            <label class="switch">
+                            <label className="switch">
                                 <input type="checkbox" />
-                                <span class="slider"></span>
+                                <span className="slider"></span>
                             </label>
                             <img src={deleteImg} alt="image" />
                         </td>
@@ -41,7 +54,7 @@ const Table = () => {
                     <tr>
                         <td>75849</td>
                         <td>MT4</td>
-                        <td>15 May 2022 8:00 am</td>
+                        <td>{ width ? "1/7/22" : "15 May 2022 8:00 am"}</td>
                         <td style={{
                             color: "#E74F48",
                             fontWeight: 700
