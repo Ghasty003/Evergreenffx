@@ -2,6 +2,13 @@
     display: flex;
     justify-content: space-between;
 
+    h3 {
+        margin-top: 5px;
+        @media (max-width: 415px) {
+            font-size: 16px !important;
+        }
+    }
+
     > div {
         display: flex;
         align-items: center;
@@ -12,6 +19,15 @@
         height: 40px;
         padding: 10px;
         overflow: hidden;
+        @media (max-width: 415px) {
+            width: 200px;
+
+            > img {
+                width: 15px;
+                position: relative;
+                right: 5px;
+            }
+        }
 
         input {
             flex: 1;

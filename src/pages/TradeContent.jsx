@@ -15,22 +15,12 @@ const Table = () => {
     const [width, setWidth] = useState(false);
 
     useEffect(() => {
-        window.addEventListener("resize", () => {
-            if (window.innerWidth <= 400) {
-                setWidth(true);
-            } else {
-                setWidth(false);
-            }
-        });
-
-        window.addEventListener("load", () => {
-            if (window.innerWidth <= 400) {
-                setWidth(true);
-            } else {
-                setWidth(false);
-            }
-        });
-    }, [width]);
+        if(window.innerWidth <= 400) {
+            setWidth(true);
+        } else {
+            setWidth(false);
+        }
+    });
 
     return (
         <div className='table-parent'>

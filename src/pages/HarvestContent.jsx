@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "../styles/invoice-content.scss";
 import SideBar from '../components/SideBar';
 import Topbar from '../components/Topbar';
 import search from '../assets/search-normal.png';
 
 const Table = () => {
+
+    const [width, setWidth] = useState(false);
+
+    useEffect(() => {
+        if(window.innerWidth <= 400) {
+            setWidth(true);
+        } else {
+            setWidth(false);
+        }
+    });
 
     return (
         <div className='table-parent'>
@@ -26,7 +36,7 @@ const Table = () => {
                     </tr>
                     <tr>
                         <td>0x4845cf4ed03c8...</td>
-                        <td>15 May 2020 8:00 am</td>
+                        <td>{ width ? "1/7/22" : "15 May 2022 8:00 am"}</td>
                         <td>$202.87</td>
                         <td style={{
                             color: "#00C805",
@@ -35,7 +45,7 @@ const Table = () => {
                     </tr>
                     <tr>
                         <td>0xc4448b77ac4a3...</td>
-                        <td>15 May 2020 9:30 am</td>
+                        <td>{ width ? "1/7/22" : "15 May 2022 8:00 am"}</td>
                         <td>$293.01</td>
                         <td style={{
                             color: "#F2CC33",
