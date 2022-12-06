@@ -117,12 +117,16 @@ const Content = () => {
         <div className='history-content bonuses-parent'>
             
             <div className='bonuses-header'>
-                <p ref={ranking} className='active' onClick={() => {
+                <p ref={ranking} className='active not-active' onClick={() => {
                     if (!ranking.current.classList.contains("active")) {
                         ranking.current.classList.add("active");
+                        ranking.current.classList.add("not-active");
                         first.current.classList.remove("active");
                         second.current.classList.remove("active");
                         third.current.classList.remove("active");
+                        first.current.classList.remove("not-active");
+                        second.current.classList.remove("not-active");
+                        third.current.classList.remove("not-active");
                         setRender(<Ranking />);
                         setToPeople();
                     }
@@ -130,9 +134,13 @@ const Content = () => {
                 <p onClick={() => {
                     if (!first.current.classList.contains("active")) {
                         first.current.classList.add("active");
+                        first.current.classList.add("not-active");
                         ranking.current.classList.remove("active");
                         second.current.classList.remove("active");
                         third.current.classList.remove("active");
+                        ranking.current.classList.remove("not-active");
+                        second.current.classList.remove("not-active");
+                        third.current.classList.remove("not-active");
                         setRender(<FirstLevel />)
                         setToMegaphone();
                     }
@@ -140,9 +148,13 @@ const Content = () => {
                 <p  onClick={() => {
                     if (!second.current.classList.contains("active")) {
                         second.current.classList.add("active");
+                        second.current.classList.add("not-active");
                         ranking.current.classList.remove("active");
                         first.current.classList.remove("active");
                         third.current.classList.remove("active");
+                        ranking.current.classList.remove("not-active");
+                        first.current.classList.remove("not-active");
+                        third.current.classList.remove("not-active");
                         setRender(<FirstLevel />)
                         setToMegaphone();
                     }
@@ -150,9 +162,13 @@ const Content = () => {
                 <p  onClick={() => {
                     if (!third.current.classList.contains("active")) {
                         third.current.classList.add("active");
+                        third.current.classList.add("not-active");
                         ranking.current.classList.remove("active");
                         second.current.classList.remove("active");
                         first.current.classList.remove("active");
+                        ranking.current.classList.remove("not-active");
+                        first.current.classList.remove("not-active");
+                        second.current.classList.remove("not-active");
                         setRender(<FirstLevel />)
                         setToMegaphone();
                     }
@@ -177,7 +193,7 @@ function Bonuses() {
             }}>
                 <Topbar title="Bonuses" />
                 <Rank />
-                <div className='referral-custom'>
+                <div className='referral-custom bonuses-div'>
                     <h2>Earnings</h2>
                     <div>
                         <CustomDiv text="Total Referrals" number="1,156" />

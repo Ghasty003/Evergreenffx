@@ -13,6 +13,11 @@
             position: relative;
             left: 10px;
         }
+
+        &:nth-child(2) {
+            position: relative;
+            right: 10px;
+        }
     }
 
     td {
@@ -38,6 +43,11 @@
 
     p {
         cursor: pointer;
+        margin-bottom: 15px;
+    }
+
+    .not-active {
+        margin-bottom: 0px;
     }
     
     .active {
@@ -51,6 +61,25 @@
     > div {
         > div:first-child {
             margin-left: -15px;
+        }
+    }
+}
+
+.bonuses-div {
+    // h2 {
+    //     @media (max-width: 840px) {
+    //         position: relative;
+    //         left: 25px;
+    //     }
+    // }
+    @media (max-width: 1310px) {
+        > div {
+            flex-wrap: wrap !important;
+            > div {
+                width: 250px !important;
+                gap: 0 !important;
+                margin: 0 !important;
+            }
         }
     }
 }
