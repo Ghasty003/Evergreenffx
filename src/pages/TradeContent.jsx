@@ -21,7 +21,15 @@ const Table = () => {
             } else {
                 setWidth(false);
             }
-        })
+        });
+
+        window.addEventListener("load", () => {
+            if (window.innerWidth <= 400) {
+                setWidth(true);
+            } else {
+                setWidth(false);
+            }
+        });
     }, [width]);
 
     return (
