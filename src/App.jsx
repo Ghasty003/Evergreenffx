@@ -13,6 +13,7 @@ import History from './pages/History';
 import HistoryContent from './pages/HistoryContent';
 import Invoices from './pages/Invoices';
 import InvoicesContent from './pages/InvoicesContent';
+import InvoicesView from './pages/InvoicesView';
 import Login from './pages/Login';
 import Referrals from './pages/Referral';
 import ReferralContent from './pages/ReferralContent';
@@ -58,6 +59,7 @@ function App() {
         <Route path='/invoices'>
           <Route index element={<Invoices />} />
           <Route path='content' element={<InvoicesContent />} />
+          <Route path='view' element={<InvoicesView />} />
         </Route>
         <Route path='/harvest'>
           <Route index element={<Harvest />} />
