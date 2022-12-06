@@ -24,7 +24,7 @@ const Table = () => {
                     <td>50349</td>
                     <td>EvergreenFX Subscription</td>
                     <td>$375.00</td>
-                    <td>1</td>
+                    <td className='text'>1</td>
                     <td>$375.00</td>
                 </tr>
 
@@ -32,7 +32,7 @@ const Table = () => {
                     <td>75849</td>
                     <td>EvergreenFX Subscription</td>
                     <td>$375.00</td>
-                    <td>2</td>
+                    <td className='text'>2</td>
                     <td>$$675.00</td>
                 </tr>
             </tbody>
