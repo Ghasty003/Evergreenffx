@@ -1,3 +1,9 @@
+@mixin tablet {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
 .table-parent {
     background-color: #FFFFFF;
     width: 95%;
@@ -10,6 +16,9 @@
         width: 40px;
         height: 24px;
         top: -15px;
+        @include tablet {
+            margin: 10px 0;
+        }
 
         input {
             opacity: 0;
@@ -83,6 +92,9 @@
         width: 100%;
         border-collapse: collapse;
         text-align: center;
+        @include tablet {
+            margin-top: 10px;
+        }
     }
 
     th, td {
@@ -91,6 +103,10 @@
 
     th {
         padding: 20px 0 20px 0;
+        @include tablet {
+            font-size: 12px !important;
+            
+        }
     }
 
     td {
@@ -98,8 +114,16 @@
         font-weight: 400;
         font-size: 14px;
         color: #191919;
+        @include tablet {
+            font-size: 12px;
+            padding: 10px;
+        }
 
         &:last-child {
+            @include tablet {
+                
+            }
+
             img {
                 margin: 0 5px;
                 cursor: pointer;
@@ -136,6 +160,9 @@
     z-index: 1000;
     box-shadow: 0 0 10px 10000px rgba(0, 0, 0, .5);
     animation: 1s add;
+    @include tablet {
+        width: 328px;
+    }
 
     h2 {
         font-size: 20px;
@@ -174,6 +201,9 @@
             border: none;
             cursor: pointer;
             box-shadow: 1.5px 1.5px #191919;
+            @include tablet {
+                width: 130px;
+            }
         }
     }
 }

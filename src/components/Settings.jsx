@@ -12,7 +12,7 @@ function Settings({ addImg, btnColor, bg, shadow, cursor}) {
             <div>
                 <div>
                     <h3>Trade Settings</h3>
-                    <p>Fill in the form below correctly to connect your trading account to our AI powered system then sit back and enjoy the ride!.</p>
+                    <p>Fill in the form below correctly to connect your trading account to our AI powered system then sit back and enjoy the ride!</p>
                 </div>
                 <button onClick={showDetails} style={{
                     color: btnColor,

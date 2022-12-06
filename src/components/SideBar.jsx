@@ -19,6 +19,7 @@ import logout from '../assets/logout.png';
 import NavContext from '../context/NavContext';
 import { FaTimes } from "react-icons/fa";
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Div = ({img, imgd, text, to}) => {
     const resolvedPath = useResolvedPath(to);
@@ -37,16 +38,18 @@ function SideBar() {
 
     const {navRef, hideNav} = useContext(NavContext);
 
-    document.addEventListener("click", (e) => {
-        if(!e.target.matches(".side-parent") && 
-            !e.target.matches(".side-parent div > *") &&
-            !e.target.matches(".menu") &&
-            !e.target.matches(".menu > *") &&
-            !navRef.current.classList.contains("toggle")
-        ) {
-            hideNav();
-        }
-    })
+   useEffect(() => {
+        document.addEventListener("click", (e) => {
+            if(!e.target.matches(".side-parent") && 
+                !e.target.matches(".side-parent div > *") &&
+                !e.target.matches(".menu") &&
+                !e.target.matches(".menu > *") &&
+                !navRef.current.classList.contains("toggle")
+            ) {
+                hideNav();
+            }
+        })
+   }, []);
 
     return (
         <div ref={navRef} className='side-parent toggle'>

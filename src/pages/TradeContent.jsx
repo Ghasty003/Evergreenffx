@@ -6,16 +6,29 @@ import deleteImg from "../assets/delete.png";
 import warn from "../assets/warn-red.png";
 import NavContext from '../context/NavContext';
 import { FaTimes } from 'react-icons/fa';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const Table = () => {
 
     const { showDisable, checkInput, showDel } = useContext(NavContext);
+    const [width, setWidth] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            if (window.innerWidth <= 400) {
+                setWidth(true);
+            } else {
+                setWidth(false);
+            }
+        })
+    }, [width]);
 
     return (
         <div className='table-parent'>
             <div>
                 <h3>Trade Settings</h3>
-                <p>Fill in the form below correctly to connect your trading account to our AI powered system then sit back and enjoy the ride!.</p>
+                <p>Fill in the form below correctly to connect your trading account to our AI powered system then sit back and enjoy the ride!</p>
             </div>
 
             <table>
@@ -30,7 +43,7 @@ const Table = () => {
                     <tr>
                         <td>75849</td>
                         <td>MT4</td>
-                        <td>15 May 2022 8:00 am</td>
+                        <td>{ width ? "1/7/22" : "15 May 2022 8:00 am"}</td>
                         <td style={{
                             color: "#00C805",
                             fontWeight: 700
@@ -48,7 +61,7 @@ const Table = () => {
                     <tr>
                         <td>75849</td>
                         <td>MT4</td>
-                        <td>15 May 2022 8:00 am</td>
+                        <td>{ width ? "1/7/22" : "15 May 2022 8:00 am"}</td>
                         <td style={{
                             color: "#E74F48",
                             fontWeight: 700

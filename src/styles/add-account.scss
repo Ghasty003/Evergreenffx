@@ -1,3 +1,9 @@
+@mixin tablet {
+    @media (max-width: 535px) {
+        @content;
+    }
+}
+
 .add-parent {
     background-color: #FFFFFF;
     width: 500px;
@@ -14,6 +20,9 @@
     z-index: 1000;
     box-shadow: 0 0 10px 10000px rgba(0, 0, 0, .5);
     animation: 1s add;
+    @include tablet {
+        width: 350px;
+    }
 
     > div {
         width: 90%;
@@ -45,6 +54,9 @@
             position: relative;
             top: -15px;
             left: -120px;
+            @include tablet {
+                left: -60px;
+            }
 
             img {
                 width: 30px;
