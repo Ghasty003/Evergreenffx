@@ -47,7 +47,8 @@ function Login() {
                             : <IoEyeOutline className='see-pass' onClick={seePassword} />
                         }
                     </i>
-                    </div>
+                </div>
+                
                 <p>Forgot Password</p>
 
                 <Link to="/dashboard"><button>Login</button></Link>

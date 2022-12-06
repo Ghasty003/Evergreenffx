@@ -14,8 +14,8 @@ function CreateAccount() {
             <main className='create-main'>
                 <Logo />
                 <div className="main-content">
-                    <h2>Create account</h2>
-                    <p>We’ll send an OTP to verify your email</p>
+                    <h2>Open new account</h2>
+                    <p>Join the community of a new generation of investors.</p>
                 </div>
 
                 <form action="" onSubmit={(e) => {
