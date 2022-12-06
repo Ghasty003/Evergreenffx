@@ -60,9 +60,9 @@ const Table = () => {
                             fontWeight: 700
                         }}>Disconnected</td>
                         <td>
-                            <label class="switch">
+                            <label className="switch">
                                 <input type="checkbox" disabled />
-                                <span class="slider"></span>
+                                <span className="slider"></span>
                             </label>
                             <img src={deleteImg} alt="image" />
                         </td>
