@@ -102,6 +102,9 @@
             cursor: pointer;
             box-shadow: 1.5px 1.5px #191919;
             margin: 10px;
+            @include tablet {
+                width: 95%;
+            }
         }
     }
 }
