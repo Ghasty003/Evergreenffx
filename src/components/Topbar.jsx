@@ -15,6 +15,8 @@ function Topbar({ title }) {
     const showProfile = () => {
         if (profileCon.current.classList.contains("profile-hide")) {
             profileCon.current.classList.remove("profile-hide")
+        } else {
+            profileCon.current.classList.add("profile-hide")
         }
     }
 
