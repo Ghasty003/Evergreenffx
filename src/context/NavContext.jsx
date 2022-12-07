@@ -15,6 +15,7 @@ export const NavContextProvider = ({children}) => {
     const del = useRef("");
     const delConfirm = useRef("");
     const withdrawal = useRef("");
+    const profileCon = useRef("");
 
     const navRefAnimation = [
         {left: "-100%", opacity: 0},
@@ -88,7 +89,8 @@ export const NavContextProvider = ({children}) => {
         showWithdrawal,
         img,
         setToMegaphone,
-        setToPeople
+        setToPeople,
+        profileCon
         }}  >
             {children}
         </NavContext.Provider>

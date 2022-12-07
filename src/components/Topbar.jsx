@@ -6,10 +6,17 @@ import eye from "../assets/eye-slash.png";
 import arrow from "../assets/Vector.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import NavContext from '../context/NavContext';
+import ProfileSettings from './ProfileSettings';
 
 function Topbar({ title }) {
 
-    const {showNav} = useContext(NavContext);
+    const {showNav, profileCon} = useContext(NavContext);
+
+    const showProfile = () => {
+        if (profileCon.current.classList.contains("profile-hide")) {
+            profileCon.current.classList.remove("profile-hide")
+        }
+    }
 
     return (
         <div className='top-parent'>
@@ -31,7 +38,7 @@ function Topbar({ title }) {
                     </div>
                     <img src={eye} alt="image" />
                 </div>
-                <div className='user'>
+                <div className='user' onClick={showProfile}>
                     <img src={pic} alt="user image" />
                     <div>
                         <p>Verified</p>
@@ -40,6 +47,7 @@ function Topbar({ title }) {
                     <img src={arrow} alt="vector" />
                 </div>
             </div>
+            <ProfileSettings />
         </div>
     );
 }

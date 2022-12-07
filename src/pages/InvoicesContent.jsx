@@ -4,6 +4,7 @@ import SideBar from '../components/SideBar';
 import Topbar from '../components/Topbar';
 import img from "../assets/printer.png";
 import search from '../assets/search-normal.png';
+import { useNavigate } from 'react-router-dom';
 
 const Table = () => {
 
@@ -16,7 +17,8 @@ const Table = () => {
             setWidth(false);
         }
     });
-    
+
+    const navigate = useNavigate();
 
     return (
         <div className='table-parent'>
@@ -48,7 +50,9 @@ const Table = () => {
                         <td>
                             <div className='invoice-btn'>
                                 <img src={img} alt="image" />
-                                <button>View</button>
+                                <button style={{cursor: "pointer"}} onClick={() => navigate("/invoices/view")}>
+                                    View
+                                </button>
                             </div>
                         </td>
                     </tr>
@@ -63,7 +67,9 @@ const Table = () => {
                         <td>
                             <div className='invoice-btn'>
                                 <img src={img} alt="image" />
-                                <button>View</button>
+                                <button style={{cursor: "pointer"}} onClick={() => navigate("/invoices/view")}>
+                                    View
+                                </button>
                             </div>
                         </td>
                     </tr>

@@ -43,6 +43,7 @@ $primary: #00C805;
             display: flex;
             align-items: center;
             gap: 10px;
+            cursor: pointer;
             @include mobile {
                 gap: 2px;
             }
