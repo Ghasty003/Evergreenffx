@@ -14,12 +14,17 @@ const Input = () => {
         
         OTPinput.forEach( (input, index) => {
             input.addEventListener("input", () => {
+                // Variable that stores all input values.
+                let allInputValues = "";
 
                 if (input.value.length > 1) {
                     input.value = input.value.slice(0, 1);
                 }
 
                 for( let i = 0; i < index + 1; i++ ) {
+
+                    allInputValues += OTPinput[i].value;
+
                     i < 5 ?  OTPinput[i + 1].focus() : ""
 
                     if( (i != 0) && (OTPinput[i].value === "") ) {
@@ -27,6 +32,10 @@ const Input = () => {
                     } else if( i === 0 && (OTPinput[i].value === "") ) {
                         OTPinput[0].focus();
                     }
+                }
+ 
+                if (index === 5) {
+                    // allInputValues is available for use here.
                 }
             });
         });
