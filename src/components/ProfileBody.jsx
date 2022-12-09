@@ -15,7 +15,7 @@ const ProfileBody = () => {
             <div>
                 <h3>User Profile</h3>
                 <i onClick={() => {
-                    profileParent.current.style.opacity = "0";
+                    profileParent.current.style.display = "none";
                 }} style={{
                     backgroundColor: "rgb(237, 232, 232)",
                     borderRadius: "50%",

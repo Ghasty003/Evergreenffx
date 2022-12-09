@@ -47,7 +47,7 @@ function ProfileSettings() {
                         account.current.classList.remove("active");
                         account.current.classList.remove("paddings");
                         setRender(<ProfileContent />);
-                        profileParent.current.style.opacity = "1";
+                        profileParent.current.style.display = "block";
                     }}>
                         <img src={profile} alt="image" />
                         <p>Edit Profile</p>
@@ -61,7 +61,7 @@ function ProfileSettings() {
                     account.current.classList.add("active");
                     account.current.classList.add("paddings");
                     setRender(<AccountContent />);
-                        profileParent.current.style.opacity = "1";
+                        profileParent.current.style.display = "block";
                     }}>
                     <div>
                         <img src={manage} alt="image" />
