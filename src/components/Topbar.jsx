@@ -7,6 +7,7 @@ import arrow from "../assets/Vector.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import NavContext from '../context/NavContext';
 import ProfileSettings from './ProfileSettings';
+import ProfileBody from './ProfileBody';
 
 function Topbar({ title }) {
 
@@ -14,9 +15,9 @@ function Topbar({ title }) {
 
     const showProfile = () => {
         if (profileCon.current.classList.contains("profile-hide")) {
-            profileCon.current.classList.remove("profile-hide")
+            profileCon.current.classList.remove("profile-hide");
         } else {
-            profileCon.current.classList.add("profile-hide")
+            profileCon.current.classList.add("profile-hide");
         }
     }
 
@@ -50,6 +51,7 @@ function Topbar({ title }) {
                 </div>
             </div>
             <ProfileSettings />
+            <ProfileBody />
         </div>
     );
 }

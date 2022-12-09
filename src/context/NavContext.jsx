@@ -1,6 +1,8 @@
 import { createContext, useRef, useState } from "react";
 import people from "../assets/oc-hi-five.svg";
 import megaphone from "../assets/oc-megaphone.svg";
+import AccountContent from "../components/AccountContent";
+import ProfileContent from "../components/ProfileContent";
 
 const NavContext = createContext();
 
@@ -16,6 +18,9 @@ export const NavContextProvider = ({children}) => {
     const delConfirm = useRef("");
     const withdrawal = useRef("");
     const profileCon = useRef("");
+    const prof = useRef("");
+    const account = useRef("");
+    const profileParent = useRef("");
 
     const navRefAnimation = [
         {left: "-100%", opacity: 0},
@@ -72,6 +77,8 @@ export const NavContextProvider = ({children}) => {
         setImg(people);
     }
 
+    const [render, setRender] = useState(<ProfileContent />);
+
     return (
         <NavContext.Provider value={{navRef, 
         showNav, 
@@ -90,7 +97,12 @@ export const NavContextProvider = ({children}) => {
         img,
         setToMegaphone,
         setToPeople,
-        profileCon
+        profileCon,
+        prof,
+        account,
+        profileParent,
+        render,
+        setRender
         }}  >
             {children}
         </NavContext.Provider>

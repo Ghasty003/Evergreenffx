@@ -11,10 +11,12 @@ import about from '../assets/about.png';
 import faq from '../assets/faq.png';
 import { useContext } from 'react';
 import NavContext from '../context/NavContext';
+import AccountContent from './AccountContent';
+import ProfileContent from './ProfileContent';
 
 function ProfileSettings() {
 
-    const { profileCon } = useContext(NavContext);
+    const { profileCon, profileParent, setRender, prof, account } = useContext(NavContext);
 
     useEffect(() => {
 
@@ -39,14 +41,28 @@ function ProfileSettings() {
             <div>
                 <h3>Profile & Account</h3>
                 <div>
-                    <div>
+                    <div onClick={() => {
+                        prof.current.classList.add("active");
+                        prof.current.classList.add("paddings");
+                        account.current.classList.remove("active");
+                        account.current.classList.remove("paddings");
+                        setRender(<ProfileContent />);
+                        profileParent.current.style.opacity = "1";
+                    }}>
                         <img src={profile} alt="image" />
                         <p>Edit Profile</p>
                     </div>
                     <img src={arrow} alt="image" />
                 </div>
 
-                <div>
+                <div onClick={() => {
+                    prof.current.classList.remove("active");
+                    prof.current.classList.remove("paddings");
+                    account.current.classList.add("active");
+                    account.current.classList.add("paddings");
+                    setRender(<AccountContent />);
+                        profileParent.current.style.opacity = "1";
+                    }}>
                     <div>
                         <img src={manage} alt="image" />
                         <p>Manage account</p>
