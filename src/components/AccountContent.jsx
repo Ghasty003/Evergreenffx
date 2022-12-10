@@ -14,9 +14,7 @@ const AccountContent = () => {
             <div className='email'>
                 <p>Current email: <span>samuelomorayewa17@gmail.com</span></p>
                 <div><input type="text" placeholder='jeff brown' /></div>
-                <div style={{
-                    justifyContent: "flex-start"
-                }}>
+                <div>
                     <button onClick={() => setEmailRender(true)}>Cancel</button>
                     <button onClick={() => setEmailRender(true)}>Save changes</button>
                 </div>
@@ -41,10 +39,7 @@ const AccountContent = () => {
 
         return (
             <div className='email'>
-                <div style={{
-                    position: "relative",
-                    width: "326px"
-                }}>
+                <div className='password'>
                     <input style={{width: "100%"}} type="password" ref={passwordInput} />
                     <i style={{
                         position: "absolute",
@@ -57,9 +52,7 @@ const AccountContent = () => {
                     </i>
                 </div>
 
-                <div style={{
-                    justifyContent: "flex-start"
-                }}>
+                <div>
                     <button onClick={() => setPasswordRender(true)}>Cancel</button>
                     <button onClick={() => setPasswordRender(true)}>Save changes</button>
                 </div>
@@ -96,7 +89,8 @@ const AccountContent = () => {
                     <p>samuelomorayewa17@gmail.com</p>
                     <p onClick={() => {
                         setEmailRender(false);
-                        setPasswordRender(true)
+                        setPasswordRender(true);
+                        setWalletRender(true);
                     }} className='special'>Change email</p>
                 </div> : <Email />}
             </div>
@@ -106,7 +100,8 @@ const AccountContent = () => {
                 { passwordRender ? <div>
                     <p onClick={() => {
                         setPasswordRender(false);
-                        setEmailRender(true)
+                        setEmailRender(true);
+                        setWalletRender(true);
                     }} className='special'>Change password</p>
                 </div> : <Password />}
             </div>
@@ -115,7 +110,11 @@ const AccountContent = () => {
                 <h3>Withdrawal Address</h3>
                 {walletRender ? <div style={{marginRight: "-10px"}}>
                     <p>USDT(TRC20) Withdrawal Address</p>
-                    <p className='special' onClick={() => setWalletRender(false)}>Update wallet address</p>
+                    <p className='special' onClick={() => {
+                        setWalletRender(false);
+                        setPasswordRender(true);
+                        setEmailRender(true);
+                    }}>Update wallet address</p>
                 </div> : <Wallet />}
             </div>
         </div>
