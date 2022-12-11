@@ -15,6 +15,7 @@ import plastore from '../assets/playstore.png';
 import appstore from "../assets/appstore.png";
 import send from "../assets/oc-sending.png";
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
+import Footer from '../components/Footer';
 
 const Div = ({h3Text, pText}) => {
 
@@ -206,6 +207,7 @@ function HomePage() {
                 </div>
             </div>
 
+            <Footer />
         </div>
     );
 }
