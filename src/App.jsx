@@ -23,6 +23,7 @@ import TradeContent from './pages/TradeContent';
 import TradeContentErr from './pages/TradeContentErr';
 import TradeSubscribed from './pages/TradeSubscribed';
 import Verify from './pages/Verify';
+import HomePage from "./pages/HomePage";
 
 function App() {
 
@@ -30,7 +31,8 @@ function App() {
     <div className="App">
      <Routes>
         <Route path='/'>
-          <Route index element={<CreateAccount />} />
+          <Route index element={<HomePage />} />
+          <Route path='create' element={<CreateAccount />} />
           <Route path='signup' element={<Signup />} />
           <Route path='verify' element={<Verify />} />
           <Route path='login' element={<Login />} />
