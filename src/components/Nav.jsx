@@ -28,7 +28,7 @@ function Nav() {
             </ul>
             <div>
                 <button onClick={() => navigate("/login")}>Login</button>
-                <button>Get Started</button>
+                <button onClick={() => navigate("/create")}>Get Started</button>
             </div>
         </nav>
     );
