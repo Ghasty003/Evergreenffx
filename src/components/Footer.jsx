@@ -9,6 +9,7 @@ import instagram from "../assets/Instagram.png";
 import youtube from '../assets/Youtube.png';
 
 function Footer() {
+    // alert(window.innerWidth)
     return (
         <footer>
 
@@ -28,7 +29,7 @@ function Footer() {
 
                 <div>
                     <h2>Download our App</h2>
-                    <div>
+                    <div className='store'>
                         <img src={plastore} alt="image" />
                         <img src={appstore} alt="image" />
                     </div>
