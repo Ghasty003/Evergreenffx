@@ -38,7 +38,7 @@ function Nav() {
                 <CustomLink to="/" text="Home" />
                 <CustomLink to="/about" text="About" />
                 <CustomLink to="/contact" text="Contact" />
-                <CustomLink to="/faqs" text="FAQs" />
+                <a href="https://support.evergreenffx.com/help-center">FAQs</a>
                 <CustomLink to="/terms" text="T&Cs" />
                 <CustomLink to="/privacy" text="Privacy" />
             </ul>
