@@ -43,7 +43,9 @@
 
         > img {
             margin-top: 50px;
-            width: 90%;
+            @media (max-width: 880px) {
+                width: 90%;
+            }
         }
     }
 
