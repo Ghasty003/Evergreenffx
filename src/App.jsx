@@ -24,6 +24,7 @@ import TradeContentErr from './pages/TradeContentErr';
 import TradeSubscribed from './pages/TradeSubscribed';
 import Verify from './pages/Verify';
 import HomePage from "./pages/HomePage";
+import AboutPage from './pages/AboutPage';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
      <Routes>
         <Route path='/'>
           <Route index element={<HomePage />} />
+          <Route path='about' element={<AboutPage />} />
           <Route path='create' element={<CreateAccount />} />
           <Route path='signup' element={<Signup />} />
           <Route path='verify' element={<Verify />} />
