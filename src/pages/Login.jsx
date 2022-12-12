@@ -55,7 +55,7 @@ function Login() {
 
                 <div className="last-content">
                     <p>New on our platform?</p>
-                    <Link to="/" style={{textDecoration: "none", color: "#00C805", 
+                    <Link to="/create" style={{textDecoration: "none", color: "#00C805", 
                     fontFamily: "DM Sans",
                     fontWeight: "700"
                 }}>Create an account</Link>
