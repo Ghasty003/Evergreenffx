@@ -7,7 +7,7 @@ function Terms() {
     return (
         <div>
             <Nav />
-
+            
             <Footer />
         </div>
     );

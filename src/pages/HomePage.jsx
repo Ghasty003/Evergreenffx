@@ -181,7 +181,7 @@ function HomePage() {
 
             </div>
 
-            <div>
+            <div id='contact'>
                 <h2>Get in touch</h2>
                 <div>
                     <img src={send} alt="image" />

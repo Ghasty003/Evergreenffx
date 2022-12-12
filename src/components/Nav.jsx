@@ -37,7 +37,7 @@ function Nav() {
                 <FaTimes onClick={hide} className="times" size={30} />
                 <CustomLink to="/" text="Home" />
                 <CustomLink to="/about" text="About" />
-                <CustomLink to="/contact" text="Contact" />
+                <a href="#contact">Contact</a>
                 <CustomLink to="/faqs" text="FAQs" />
                 <CustomLink to="/terms" text="T&Cs" />
                 <CustomLink to="/privacy" text="Privacy" />
