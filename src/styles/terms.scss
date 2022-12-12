@@ -5,6 +5,10 @@
 .terms-lists {
     padding: 96px 135px;
 
+    @media (max-width: 700px) {
+        padding: 40px;
+    }
+
     > ol {
 
         > li {
