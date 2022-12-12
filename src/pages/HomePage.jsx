@@ -49,6 +49,67 @@ const Div = ({h3Text, pText}) => {
     )
 }
 
+export const Contact = () => {
+    return (
+        <div id='contact'>
+            <h2>Get in touch</h2>
+            <div>
+                <img src={send} alt="image" />
+
+                <div>
+                    <div>
+                        <label htmlFor="name">Name</label>
+                        <input type="text" id='name' placeholder='Your name' />
+                    </div>
+
+                    <div>
+                        <label htmlFor="email">Email</label>
+                        <input type="text" id='email' placeholder='Enter your email' />
+                    </div>
+
+                    <div>
+                        <label htmlFor="message">Email</label>
+                        <textarea id="message" placeholder='What do you want to say?' />
+                    </div>
+                    
+                    <button>Submit</button>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export const FAQ = () => {
+    return (
+        <div className='faqs'>
+            <h2>Frequently Asked Questions</h2>
+            
+            <Div h3Text="What Does EvergreenFFX do?"
+                pText="EvergreenFFx provides a decentralized platform for FOREX TRADING that helps 
+                both beginners and experts make money while they focus on other areas of their daily lives."
+            />
+            <Div h3Text="How Much Does It Cost To Get Started?" 
+                pText="EvergreenFFx provides a decentralized platform for FOREX TRADING that helps 
+                both beginners and experts make money while they focus on other areas of their daily lives."
+            />
+            <Div h3Text="What is EvergreenFFX Profit Sharing?"
+                pText="EvergreenFFx provides a decentralized platform for FOREX TRADING that helps 
+                both beginners and experts make money while they focus on other areas of their daily lives."
+            />
+            <Div h3Text="How Do I Make Payments?" 
+                pText="EvergreenFFx provides a decentralized platform for FOREX TRADING that helps 
+                both beginners and experts make money while they focus on other areas of their daily lives."
+            />
+
+            <Div h3Text="How Long Does It Take For Payments To Be Verified?" 
+                pText="EvergreenFFx provides a decentralized platform for FOREX TRADING that helps 
+                both beginners and experts make money while they focus on other areas of their daily lives."
+            />
+
+        </div>
+    )
+}
+
 function HomePage() {
 
     return (
@@ -154,58 +215,9 @@ function HomePage() {
                 </div>
             </div>
 
-            <div>
-                <h2>Frequently Asked Questions</h2>
-                
-               <Div h3Text="What Does EvergreenFFX do?"
-                    pText="EvergreenFFx provides a decentralized platform for FOREX TRADING that helps 
-                    both beginners and experts make money while they focus on other areas of their daily lives."
-                />
-               <Div h3Text="How Much Does It Cost To Get Started?" 
-                    pText="EvergreenFFx provides a decentralized platform for FOREX TRADING that helps 
-                    both beginners and experts make money while they focus on other areas of their daily lives."
-               />
-               <Div h3Text="What is EvergreenFFX Profit Sharing?"
-                    pText="EvergreenFFx provides a decentralized platform for FOREX TRADING that helps 
-                    both beginners and experts make money while they focus on other areas of their daily lives."
-               />
-               <Div h3Text="How Do I Make Payments?" 
-                    pText="EvergreenFFx provides a decentralized platform for FOREX TRADING that helps 
-                    both beginners and experts make money while they focus on other areas of their daily lives."
-               />
+            <FAQ />
 
-               <Div h3Text="How Long Does It Take For Payments To Be Verified?" 
-                    pText="EvergreenFFx provides a decentralized platform for FOREX TRADING that helps 
-                    both beginners and experts make money while they focus on other areas of their daily lives."
-               />
-
-            </div>
-
-            <div id='contact'>
-                <h2>Get in touch</h2>
-                <div>
-                    <img src={send} alt="image" />
-
-                    <div>
-                        <div>
-                            <label htmlFor="name">Name</label>
-                            <input type="text" id='name' placeholder='Your name' />
-                        </div>
-
-                        <div>
-                            <label htmlFor="email">Email</label>
-                            <input type="text" id='email' placeholder='Enter your email' />
-                        </div>
-
-                        <div>
-                            <label htmlFor="message">Email</label>
-                            <textarea id="message" placeholder='What do you want to say?' />
-                        </div>
-                        
-                        <button>Submit</button>
-                    </div>
-                </div>
-            </div>
+            <Contact />
 
             <Footer />
         </div>
