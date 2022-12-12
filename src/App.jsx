@@ -26,6 +26,7 @@ import Verify from './pages/Verify';
 import HomePage from "./pages/HomePage";
 import AboutPage from './pages/AboutPage';
 import Terms from './pages/Terms';
+import ContactPage from './pages/ContactPage';
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path='about' element={<AboutPage />} />
           <Route path='terms' element={<Terms />} />
+          <Route path='contact' element={<ContactPage />} />
           <Route path='create' element={<CreateAccount />} />
           <Route path='signup' element={<Signup />} />
           <Route path='verify' element={<Verify />} />
