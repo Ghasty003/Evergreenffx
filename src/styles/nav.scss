@@ -13,6 +13,7 @@ nav {
     position: relative;
     @include mobile {
         justify-content: space-between;
+        padding: 0px 20px;
     }
 
     > img:first-child {
@@ -24,6 +25,7 @@ nav {
         display: none;
         @include mobile {
             display: block;
+            width: 100px;
         }
     }
 
