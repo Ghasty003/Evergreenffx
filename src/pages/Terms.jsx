@@ -188,11 +188,14 @@ function Terms() {
                         <p>
                         You may provide us either directly at hello@evergreenffx.com with information and feedback 
                         concerning errors, suggestions for improvements, ideas, problems, complaints, and other 
-                        matters related to our website (“Feedback”). You acknowledge and agree that: (i) you shall 
+                        matters related to our website (“Feedback”). You acknowledge and agree that: <br />
+                        (i) you shall 
                         not retain, acquire or assert any intellectual property right or other rights, title, or 
-                        interest in or to the Feedback; (ii) Company may have developed ideas similar to the Feedback; 
+                        interest in or to the Feedback; <br />
+                         (ii) Company may have developed ideas similar to the Feedback;  <br />
                         (iii) Feedback does not contain confidential information or proprietary information from you or 
-                        any third party; (iv) Company is not under any obligation of confidentiality with respect to the 
+                        any third party; <br />
+                         (iv) Company is not under any obligation of confidentiality with respect to the 
                         Feedback. In the event the transfer of the ownership to the Feedback is not possible due to 
                         applicable mandatory laws, you grant Company and its affiliates an exclusive, transferable, 
                         irrevocable, free-of-charge, sub-licensable, unlimited, and perpetual right to use 
