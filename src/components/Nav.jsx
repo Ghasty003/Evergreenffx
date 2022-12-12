@@ -39,7 +39,7 @@ function Nav() {
                 <CustomLink to="/about" text="About" />
                 <CustomLink to="/contact" text="Contact" />
                 <CustomLink to="/faqs" text="FAQs" />
-                <CustomLink to="t&c" text="T&Cs" />
+                <CustomLink to="/terms" text="T&Cs" />
                 <CustomLink to="/privacy" text="Privacy" />
             </ul>
             <div onClick={show}>

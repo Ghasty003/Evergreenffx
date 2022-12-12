@@ -25,6 +25,7 @@ import TradeSubscribed from './pages/TradeSubscribed';
 import Verify from './pages/Verify';
 import HomePage from "./pages/HomePage";
 import AboutPage from './pages/AboutPage';
+import Terms from './pages/Terms';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='/'>
           <Route index element={<HomePage />} />
           <Route path='about' element={<AboutPage />} />
+          <Route path='terms' element={<Terms />} />
           <Route path='create' element={<CreateAccount />} />
           <Route path='signup' element={<Signup />} />
           <Route path='verify' element={<Verify />} />
