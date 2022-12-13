@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import "../styles/sidebar.scss";
-import logo from "../assets/evergreeen-logo.png";
+import logo from "../assets/ever15 1.png";
 import img1 from "../assets/category-2.png";
 import dashboardDark from "../assets/dashboard-dark.png";
 import trade from "../assets/trade.png";
@@ -55,7 +55,7 @@ function SideBar() {
         <div ref={navRef} className='side-parent toggle'>
             <div>
                 <img src={logo} alt="logo" />
-                <FaTimes className='icon' onClick={hideNav} />
+                {/* <FaTimes className='icon' onClick={hideNav} /> */}
             </div>
             <Div to="/dashboard" imgd={dashboardDark} img={img1} text="Dashboard" />
             <Div to="/trade" img={trade} imgd={tradeDark} text="Trade" />

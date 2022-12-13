@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=DM Sans");
 
-$primary: #00855D;
 $font: "DM Sans";
 
 @mixin tablet {
@@ -60,11 +59,15 @@ $font: "DM Sans";
 
     > div:first-child {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 100%;
 
         img {
+            width: 250px;
             margin-bottom: 30px;
+            position: relative;
+            left: -20px;
+            // display: none;
         }
 
         .icon {
