@@ -155,12 +155,13 @@ $font: "DM Sans";
                 font-size: 16px;
                 text-align: center;
                 cursor: pointer;
-                box-shadow: 1.5px 1.5px #191919;
+                border-width: .5px 2px 2px .5px;
+                border-style: solid;
+                border-color: black;
 
                 &:nth-child(2) {
                     margin: 20px 0;
                     background: white;
-                    border: 1px solid #191919;
                 }
             }
         }
