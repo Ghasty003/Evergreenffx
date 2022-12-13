@@ -86,7 +86,7 @@
             > div {
                 border-radius: 16px;
                 margin-top: 20px;
-                padding: 25px;
+                padding: 40px;
 
                 h3 {
                     font-weight: 700;
@@ -159,6 +159,7 @@
                 border-width: 1px 4px 4px 1px;
                 border-style: solid;
                 border-color: #191919;
+                padding-top: 15px;
                 
                 h3, p {
                     color: #191919;
@@ -222,6 +223,10 @@
             justify-content: center;
         }
 
+        @include mobile {
+            margin-top: 100px;
+        }
+
         > img {
             position: absolute;
             left: 50px;
@@ -241,7 +246,7 @@
         > div {
             position: absolute;
             right: 30px;
-            top: 30%;
+            top: 25%;
 
             @media (max-width: 920px) {
                 display: flex;
@@ -285,6 +290,10 @@
     justify-content: center;
     align-items: center;
 
+    @include mobile {
+        margin-top: 100px;
+    }
+
     h2 {
         margin: 50px;
         font-weight: 700;
@@ -299,7 +308,7 @@
     > div {
         width: 700px;
         height: 50px;
-        padding: 10px;
+        padding: 10px 20px;
         background: white;
         border: 1px solid #D1D1D1;
         border-radius: 8px;
@@ -327,13 +336,17 @@
         }
 
         h3 {
-            @media (max-width: 500px) {
+            @media (max-width: 602px) {
                 font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
 
         p {
-            @media (max-width: 500px) {
+            padding: 5px;
+            @media (max-width: 602px) {
                 font-size: 12px;
             }
         }

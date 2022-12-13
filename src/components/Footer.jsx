@@ -9,7 +9,6 @@ import instagram from "../assets/Instagram.png";
 import youtube from '../assets/Youtube.png';
 
 function Footer() {
-    // alert(window.innerWidth)
     return (
         <footer>
 
