@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import Side from '../components/Side';
-import logo from "../assets/logo-dark2x.png";
+import logo from "../assets/ever15 1.png";
 import { Link } from 'react-router-dom';
 import { IoEyeOutline } from "react-icons/io5";
 import { FiEyeOff } from "react-icons/fi";
@@ -25,43 +25,43 @@ function Login() {
         <div className='parent'>
             <Side />
             
-        <main className='login-main'>
-            <img src={logo} alt="logo" />
+            <main className='login-main'>
+                <img src={logo} alt="logo" />
 
-            <div className="header">
-                <h2>Login</h2>
-                <p>Access your dashboard using your email and passcode</p>
-            </div>
-
-            <form action="">
-                <div>
-                    <p>Your email</p>
-                    <input type="email" placeholder="jeffbrown@example.com" required />
+                <div className="header">
+                    <h2>Login</h2>
+                    <p>Access your dashboard using your email and passcode</p>
                 </div>
 
-                <div className="password">
-                    <p>Password</p>
-                    <input type="password" className="pass" ref={passwordInput} required />
-                    <i>
-                        { seePass ? <FiEyeOff className='see-pass' onClick={hidePassword} />
-                            : <IoEyeOutline className='see-pass' onClick={seePassword} />
-                        }
-                    </i>
-                </div>
-                
-                <p>Forgot Password</p>
+                <form action="">
+                    <div>
+                        <p>Your email</p>
+                        <input type="email" placeholder="jeffbrown@example.com" required />
+                    </div>
 
-                <Link to="/dashboard"><button>Login</button></Link>
+                    <div className="password">
+                        <p>Password</p>
+                        <input type="password" className="pass" ref={passwordInput} required />
+                        <i>
+                            { seePass ? <FiEyeOff className='see-pass' onClick={hidePassword} />
+                                : <IoEyeOutline className='see-pass' onClick={seePassword} />
+                            }
+                        </i>
+                    </div>
+                    
+                    <p>Forgot Password</p>
 
-                <div className="last-content">
-                    <p>New on our platform?</p>
-                    <Link to="/create" style={{textDecoration: "none", color: "#00C805", 
-                    fontFamily: "DM Sans",
-                    fontWeight: "700"
-                }}>Create an account</Link>
-                </div>
-            </form>
-        </main>
+                    <Link to="/dashboard"><button>Login</button></Link>
+
+                    <div className="last-content">
+                        <p>New on our platform?</p>
+                        <Link to="/create" style={{textDecoration: "none", color: "#00C805", 
+                        fontFamily: "DM Sans",
+                        fontWeight: "700"
+                    }}>Create an account</Link>
+                    </div>
+                </form>
+            </main>
         </div>
     );
 }
