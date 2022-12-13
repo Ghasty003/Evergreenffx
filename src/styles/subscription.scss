@@ -18,7 +18,9 @@
     border-radius: 8px;
     position: relative;
     color: #191919;
-    box-shadow: 3px 3px #191919, 0 -1px #191919;
+    border-width: 1px 4px 4px 1px;
+    border-style: solid;
+    border-color: black;
 
     > div {
         background-image: url("../assets/circles.png");
@@ -58,7 +60,10 @@
                 border-radius: 4px;
                 color: #191919;
                 margin-top: 5px;
-                box-shadow: 1.5px 1.5px #191919;
+                border-width: .5px 2px 2px .5px;
+                border-style: solid;
+                border-color: black;
+                cursor: pointer;
             }
         }
     
