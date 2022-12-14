@@ -1,14 +1,10 @@
 import { createContext, useRef, useState } from "react";
-import people from "../assets/oc-hi-five.svg";
-import megaphone from "../assets/oc-megaphone.svg";
 import AccountContent from "../components/AccountContent";
 import ProfileContent from "../components/ProfileContent";
 
 const NavContext = createContext();
 
 export const NavContextProvider = ({children}) => {
-
-    const [img, setImg] = useState(people);
 
     const navRef = useRef("");
     const div = useRef("");
@@ -69,14 +65,6 @@ export const NavContextProvider = ({children}) => {
         withdrawal.current.style.display = "flex";
     }
 
-    const setToMegaphone = () => {
-        setImg(megaphone);
-    }
-
-    const setToPeople = () => {
-        setImg(people);
-    }
-
     const [render, setRender] = useState(<ProfileContent />);
 
     return (
@@ -94,9 +82,6 @@ export const NavContextProvider = ({children}) => {
         showDelConfirm,
         withdrawal,
         showWithdrawal,
-        img,
-        setToMegaphone,
-        setToPeople,
         profileCon,
         prof,
         account,

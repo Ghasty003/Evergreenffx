@@ -1,11 +1,8 @@
-import React, { useContext } from 'react';
-import NavContext from '../context/NavContext';
+import React from 'react';
 import "../styles/rank.scss";
-import megaphone from "../assets/oc-megaphone.svg";
+import img from "../assets/oc-hi-five.svg";
 
 function Rank() {
-
-    const {img} = useContext(NavContext);
 
     return (
         <div className='sub-parent rank'>
@@ -19,7 +16,7 @@ function Rank() {
                     <p>You have 20 more referals to complete this level.</p>
                 </div>
                 <div>
-                    <img className={`${img === megaphone ? "img" : ""}`} src={img} alt="image" />
+                    <img src={img} alt="image" />
                 </div>
             </div>
         </div>
