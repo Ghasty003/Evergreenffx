@@ -43,8 +43,7 @@ function ProfileSettings() {
         <div ref={profileCon} className='profile-container profile-hide'>
             <div>
                 <h3>Profile & Account</h3>
-                <div>
-                    <div onClick={() => {
+                <div onClick={() => {
                         prof.current.classList.add("active");
                         prof.current.classList.add("paddings");
                         account.current.classList.remove("active");
@@ -52,6 +51,7 @@ function ProfileSettings() {
                         setRender(<ProfileContent />);
                         profileParent.current.style.display = "block";
                     }}>
+                    <div>
                         <img src={profile} alt="image" />
                         <p>Edit Profile</p>
                     </div>
