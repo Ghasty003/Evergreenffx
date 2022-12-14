@@ -4,7 +4,7 @@ import Topbar from "../components/Topbar";
 import "../styles/referrals.scss";
 import people from "../assets/oc-hi-five.svg";
 
-const CustomDiv = ({ text, number}) => {
+const CustomDiv = ({ text, number }) => {
     return (
         <div>
             <p>{ text }</p>
