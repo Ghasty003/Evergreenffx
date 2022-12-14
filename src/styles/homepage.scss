@@ -221,10 +221,7 @@
 
         @media (max-width: 920px) {
             justify-content: center;
-        }
-
-        @include mobile {
-            margin-top: 100px;
+            margin: 50px auto;
         }
 
         > img {
@@ -283,7 +280,7 @@
 
 .faqs {
     background: #FAFAFA;
-    margin-top: 300px;
+    margin-top: 100px;
     padding-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -291,7 +288,7 @@
     align-items: center;
 
     @include mobile {
-        margin-top: 100px;
+        margin-top: 0px;
     }
 
     h2 {
@@ -321,7 +318,7 @@
         }
 
         &.height {
-            height: 120px;
+            height: 110px;
 
             @media (max-width: 730px) {
                 height: 130px;
