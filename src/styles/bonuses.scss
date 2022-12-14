@@ -66,17 +66,31 @@
 }
 
 .bonuses-div {
-    // h2 {
-    //     @media (max-width: 840px) {
-    //         position: relative;
-    //         left: 25px;
-    //     }
-    // }
+    width: 95% !important;
+    padding:  0 !important;
+    margin: 0 !important;
+
+    h2 {
+        padding-left: 30px;
+
+        @media (max-width: 1052px) {
+            padding-left: 25px !important;
+        }
+    }
+    > div {
+        width: 100% !important;
+        padding-left: 20px;
+        justify-content: space-between !important;
+       
+        @media (max-width: 1025px) {
+            justify-content: center !important;
+        } 
+    }
     @media (max-width: 1310px) {
         > div {
             flex-wrap: wrap !important;
             > div {
-                width: 250px !important;
+                width: 350px !important;
                 gap: 0 !important;
                 margin: 0 !important;
             }
