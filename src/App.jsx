@@ -28,6 +28,7 @@ import AboutPage from './pages/AboutPage';
 import Terms from './pages/Terms';
 import ContactPage from './pages/ContactPage';
 import Privacy from './pages/Privacy';
+import ForgotPassword from './pages/ForgotPassword';
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
           <Route path='signup' element={<Signup />} />
           <Route path='verify' element={<Verify />} />
           <Route path='login' element={<Login />} />
+          <Route path='/reset-password' element={<ForgotPassword />} />
         </Route>
         <Route path='/dashboard'>
           <Route index element={<Dashboard />} />
