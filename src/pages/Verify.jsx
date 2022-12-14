@@ -83,7 +83,7 @@ function Verify() {
                             <Input />
                             <Input />
                         </div>
-                        <button>Re-enter email</button> <br />
+                        <button onClick={() => navigate("/create")}>Re-enter email</button> <br />
                         <button onClick={() => navigate("/signup")}>Verify</button>
                     </form>
                 </div>
