@@ -1,5 +1,5 @@
 import React from 'react';
-import illustration from "../assets/Illustration.png";
+import illustration from "../assets/oc-project-development.png";
 import "../styles/side.scss";
 
 
