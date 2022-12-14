@@ -23,24 +23,24 @@ const Div = ({h3Text, pText}) => {
 
     const div = useRef("");
 
-    const addHeight = () => {
-        div.current.classList.add("height");
-        setAdd(false);
-    }
-
-    const removeHeight = () => {
-        div.current.classList.remove("height");
-        setAdd(true);
+    const toggleHeight = () => {
+        if (div.current.classList.contains("height")) {
+            div.current.classList.remove("height");
+            setAdd(true);
+        } else {
+            div.current.classList.add("height");
+            setAdd(false);
+        }
     }
 
     return (
         <>
-            <div ref={div}>
+            <div onClick={toggleHeight} ref={div}>
                 <div>
                     <h3>{ h3Text }</h3>
                     {
-                        add ? <FaAngleDown onClick={addHeight} size={25} cursor="pointer" /> 
-                        : <FaAngleUp onClick={removeHeight} size={25} />
+                        add ? <FaAngleDown size={25} cursor="pointer" /> 
+                        : <FaAngleUp size={25} />
                     }
                 </div>
                 <p>{ pText }</p>
