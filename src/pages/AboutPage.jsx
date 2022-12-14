@@ -63,6 +63,7 @@ function AboutPage() {
                 <h3>Rankings</h3>
 
                 <div>
+                    <div class="hal-rankings one">
                     <Div img={mark1} h3Text="The Leader"
                         pText="A leader would have 10 downlines and would be eligible to get compensated with 
                         a $100 affiliate bonus."
@@ -77,6 +78,9 @@ function AboutPage() {
                         pText="To be eligible as a sapphire executive, the affiliate would have 100 downlines 
                         to get compensated with $1,000 affiliate bonus."
                     />
+                    </div>
+
+                    <div class="hal-rankings two">
                     <Div img={star2} h3Text="The Sapphire Director"
                         pText="A sapphire director would have 1,100 downlines to be eligible to get 
                         compensated with $5,000 affiliate bonus."
@@ -89,6 +93,10 @@ function AboutPage() {
                         pText="A ruby director would have 15,000 downlines to be eligible to get compensated 
                         with $50,000 affiliate bonus."
                     />
+
+                    </div>
+
+                    <div class="hal-rankings three">
                     <Div img={ruby1} h3Text="The Diamond Executive"
                         pText="To be eligible as a diamond executive, the affiliate would have 30,000 
                         downlines to get compensated with $75,000 affiliate bonus."
@@ -101,6 +109,7 @@ function AboutPage() {
                         pText="To be an Evergreen ambassador, the affiliate would have 120,000 downlines 
                         to get compensated with $300,000 affiliate bonus."
                     />
+                    </div>
                 </div>
                 
                 <h3>NOTE: Downlines is the number of referrals that made use of your referral 
