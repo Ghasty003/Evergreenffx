@@ -26,7 +26,6 @@ $primary: #00C805;
     border: 1px solid #FAFAFA;
     font-family: $font;
     @include tablet {
-        padding-top: 20px;
         position: relative;
         height: 170px;
         align-items: flex-start;
