@@ -3,6 +3,9 @@
 }
 
 .terms-lists {
+    @media (min-width: 1500px) {
+        padding: 96px 150px;
+    }
     padding: 96px 135px;
 
     @media (max-width: 700px) {
