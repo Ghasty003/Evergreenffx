@@ -13,10 +13,13 @@ import { useContext } from 'react';
 import NavContext from '../context/NavContext';
 import AccountContent from './AccountContent';
 import ProfileContent from './ProfileContent';
+import { useNavigate } from 'react-router-dom';
 
 function ProfileSettings() {
 
     const { profileCon, profileParent, setRender, prof, account } = useContext(NavContext);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -99,7 +102,7 @@ function ProfileSettings() {
             <div>
                 <h3>General</h3>
                 <div>
-                    <div>
+                    <div onClick={() => navigate("/contact")}>
                         <img src={contact} alt="image" />
                         <p>Contact Us</p>
                     </div>
@@ -109,19 +112,20 @@ function ProfileSettings() {
                 <div>
                     <div>
                         <img src={faq} alt="image" />
-                        <p>FAQs</p>
+                        <p><a style={{color: "inherit", textDecoration: "none"}}
+                         href="https://support.evergreenffx.com/help-center">FAQs</a></p>
                     </div>
                     <img src={arrow} alt="image" />
                 </div>
                 <div>
-                    <div>
+                    <div onClick={() => navigate("/privacy")}>
                         <img src={PT} alt="image" />
                         <p>Privacy & Terms</p>
                     </div>
                     <img src={arrow} alt="image" />
                 </div>
                 <div>
-                    <div>
+                    <div onClick={() => navigate("/about")}>
                         <img src={about} alt="image" />
                         <p>About Evergreen</p>
                     </div>
