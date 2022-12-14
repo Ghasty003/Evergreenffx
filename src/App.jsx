@@ -45,7 +45,7 @@ function App() {
           <Route path='signup' element={<Signup />} />
           <Route path='verify' element={<Verify />} />
           <Route path='login' element={<Login />} />
-          <Route path='/reset-password' element={<ForgotPassword />} />
+          <Route path='reset-password' element={<ForgotPassword />} />
         </Route>
         <Route path='/dashboard'>
           <Route index element={<Dashboard />} />

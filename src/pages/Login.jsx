@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import Side from '../components/Side';
 import logo from "../assets/ever15 1.png";
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { IoEyeOutline } from "react-icons/io5";
 import { FiEyeOff } from "react-icons/fi";
 import "../styles/login.scss";
@@ -20,6 +20,8 @@ function Login() {
         setSeePass(false);
         passwordInput.current.type = "password";
     }
+
+    const navigate = useNavigate();
 
     return (
         <div className='parent'>
@@ -49,7 +51,7 @@ function Login() {
                         </i>
                     </div>
                     
-                    <p>Forgot Password</p>
+                    <p onClick={() => navigate("/reset-password")}>Forgot Password</p>
 
                     <Link to="/dashboard"><button>Login</button></Link>
 
