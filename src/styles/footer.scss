@@ -13,6 +13,18 @@ footer {
     @media (min-width: 1500px) {
         padding: 96px 150px;
     }
+    
+    @media (max-width: 1230px) and (min-width:769px){
+        padding:96px 90px;
+    }
+    @media (max-width:768px){
+        padding:80px 60px;
+    }
+
+
+    @include mobile {
+        padding: 40px;
+    }
 
     > div:first-child {
         display: flex;
