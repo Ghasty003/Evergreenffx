@@ -70,7 +70,7 @@ function Verify() {
                         color: "#696969"
                     }}>Not your email? <span style={{
                         color: "#00C805"
-                    }}>Go back</span></p>
+                    }} onClick={() => navigate("/create")}>Go back</span></p>
 
                     <form action="" onSubmit={(e) => {
                         e.preventDefault();
