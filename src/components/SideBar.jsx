@@ -44,7 +44,6 @@ function SideBar() {
             !menu.current.contains(e.target) &&
             !navRef.current.classList.contains("toggle")
             ) {
-                console.log("yaa");
                 hideNav();
             }
         });
