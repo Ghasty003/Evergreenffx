@@ -36,19 +36,18 @@ const Div = ({img, imgd, text, to}) => {
 
 function SideBar() {
 
-    const {navRef, hideNav} = useContext(NavContext);
+    const {navRef, hideNav, menu} = useContext(NavContext);
 
-   useEffect(() => {
+    useEffect(() => {
         document.addEventListener("click", (e) => {
-            if(!e.target.matches(".side-parent") && 
-                !e.target.matches(".side-parent div > *") &&
-                !e.target.matches(".menu") &&
-                !e.target.matches(".menu > *") &&
-                !navRef.current.classList.contains("toggle")
+            if (!navRef.current.contains(e.target) &&
+            !menu.current.contains(e.target) &&
+            !navRef.current.classList.contains("toggle")
             ) {
+                console.log("yaa");
                 hideNav();
             }
-        })
+        });
    }, []);
 
     return (

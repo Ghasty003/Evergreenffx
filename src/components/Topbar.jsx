@@ -11,7 +11,7 @@ import ProfileBody from './ProfileBody';
 
 function Topbar({ title }) {
 
-    const {showNav, profileCon} = useContext(NavContext);
+    const {showNav, profileCon, menu} = useContext(NavContext);
 
     const showProfile = () => {
         if (profileCon.current.classList.contains("profile-hide")) {
@@ -23,7 +23,7 @@ function Topbar({ title }) {
 
     return (
         <div className='top-parent'>
-            <div className='menu'>
+            <div ref={menu} className='menu'>
                 <AiOutlineMenu className='icon' onClick={showNav} style={{
                     fontSize: "20px",
                     position: "relative",

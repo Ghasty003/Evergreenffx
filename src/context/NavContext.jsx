@@ -8,6 +8,7 @@ export const NavContextProvider = ({children}) => {
 
     const navRef = useRef("");
     const div = useRef("");
+    const menu = useRef("");
     const disable = useRef("");
     const checkInput = useRef("");
     const del = useRef("");
@@ -87,7 +88,8 @@ export const NavContextProvider = ({children}) => {
         account,
         profileParent,
         render,
-        setRender
+        setRender,
+        menu
         }}  >
             {children}
         </NavContext.Provider>
