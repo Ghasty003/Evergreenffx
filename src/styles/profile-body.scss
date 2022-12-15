@@ -11,9 +11,6 @@
 }
 
 .profile-parent {
-    @media (min-width: 1400px) {
-        margin-left: 200px;
-    }
     background: #FFFFFF;
     width: 600px;
     height: fit-content;
@@ -21,8 +18,9 @@
     padding: 20px 40px;
     box-shadow: 0 0 10px 10000px rgba(0, 0, 0, .5);
     position: absolute;
-    margin-left: 100px;
-    margin-top: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     transition: all .5s;
     display: none;
     z-index: 1000000;
@@ -30,21 +28,13 @@
         width: 500px;
     }
 
-    @media (max-width: 880px) {
-        left: 50px;
-        top: -300px;
-    }
-
-    @media (max-width: 670px) {
-        left: -50px;
+    @media (max-width: 810px) {
+        transform: translate(-50%, 10%);
     }
 
     @include mobile {
         width: 320px;
-    }
-
-    @media (max-width: 390px) {
-        left: -90px;
+        padding: 20px;
     }
 
     > div:first-child {
