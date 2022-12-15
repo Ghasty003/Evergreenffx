@@ -6,7 +6,7 @@ import people from "../assets/oc-hi-five.svg";
 
 const CustomDiv = ({ text, number }) => {
     return (
-        <div class="hal-ref">
+        <div className="hal-ref">
             <p>{ text }</p>
             <p>{ number }</p>
         </div>
